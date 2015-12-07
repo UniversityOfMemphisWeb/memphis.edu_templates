@@ -1,0 +1,194 @@
+@media (min-width: $screen-lg-min) {
+  .col-lg-hidden {
+    display: none !important;
+  }
+
+  .col-lg-show {
+    display: block !important;
+  }
+
+  .type-- {
+    &alumni {
+      &__ {
+        &switcher {
+          &__ {
+            &images {
+              img {
+                max-width: none;
+                //max-width: 100%;
+                //width: 100%; height: auto
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .icon {
+    &- {
+      &custom {
+        &- {
+          &tickets {
+            width: 75px;
+            height: 56px;
+            background-size: auto auto;
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    &--bg3 {
+      padding: 18px 0 0;
+    }
+
+    &--logo {
+      img {
+        //      margin-top: 15px;
+      }
+    }
+
+    &--top {
+      //    margin-right: -402%;
+      top: -(18px + 13px);
+
+      nav {
+        a {
+          padding: 0 12px;
+        }
+      }
+    }
+
+    &--search {
+      padding: 15px 0 0 16px;
+      width: 143px;
+    }
+
+    &--bottom {
+      nav {
+        margin-right: 16px;
+
+        > ul {
+          > li {
+            > a {
+            }
+          }
+        }
+      }
+    }
+
+    &--box {
+      &__wrapper {
+
+      }
+
+      &__text {
+        a {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+
+  div {
+    .header {
+      &--box {
+        &__text {
+          padding: 0 36px;
+        }
+      }
+    }
+  }
+
+  .wrap--home {
+    .box--transparent {
+      font-size: 18px;
+
+      a {
+        i {
+          font-size: 36px;
+        }
+      }
+    }
+
+    .box--link__button {
+      margin-left: 10px;
+    }
+
+    &__prospective {
+      &-students__apply-online {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+
+  .enews--button {
+    padding: 8px 22px 10px 12px;
+    width: auto;
+
+    i {
+      padding-right: 18px;
+    }
+  }
+
+  .slideshow {
+    &-page {
+      &-- {
+        &overlay {
+          &__ {
+            &wrapper {
+              padding: 25px 25px 20px 50px;
+            }
+            &title {
+            }
+          }
+        }
+        &slider {
+          &__pager {
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    &--box {
+      .slideshow--slider {
+        .slideshow--slider__pager {
+          &__wrapper {
+            span {
+              padding: 0 16px;
+            }
+          }
+        }
+      }
+
+      &__news {
+        .sidebar--box__title {
+          a {
+            float: right;
+          }
+        }
+      }
+    }
+
+    &--socialmedia {
+      a {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  .footer {
+    &--top {
+      &__ {
+        &text {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

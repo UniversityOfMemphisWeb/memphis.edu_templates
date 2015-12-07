@@ -1,2 +1,2 @@
-# memphis.edu_templates
-Memphis.edu Templates for OU Campus
+# memphis.edu
+U of M Web Design Templates

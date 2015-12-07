@@ -1,0 +1,36 @@
+@media (max-width: ($screen-xs-max)) {
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-show {
+    display: block !important;
+  }
+
+  .type-- {
+    &home {
+      .cover {
+        background-image: none !important;
+        min-height: 0 !important;
+      }
+    }
+    &alumni {
+      .cover {
+        min-height: 525px !important;
+      }
+    }
+  }
+
+  .slideshow {
+    padding-top: 97.647058823529%;
+    margin-top: 83px;
+  }
+
+  .slideshow--container {
+    top: 83px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

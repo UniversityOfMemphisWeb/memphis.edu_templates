@@ -1,0 +1,273 @@
+{% extends 'layout.html.twig' %}
+{% set active = ['type--subpage', 'type--page'] %}
+
+{% block title %}Subpage - {% endblock %}
+
+{% block cover %}
+
+        <div class="background cover">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="cover--title">
+
+                        <div class="cover--title__wrap">
+
+                            <div class="col-xs-24 col-md-17 col-md-offset-7">
+                                Prospective Students
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="content">
+
+            <div class="content--top">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-17 col-md-offset-7">
+
+                            <div class="breadcrumb col-xs-hidden col-md-show">
+                                <ul>
+                                    <li><a href="{{ url('homepage') }}">Home</a></li>
+                                    <li>Prospective Students</li>
+                                </ul>
+                            </div>
+
+                            <div id="nav--list__top" class="col-xs-show col-md-hidden">
+                                <div class="sidebar--box sidebar--box__border">
+                                    <div class="sidebar--box__title">Prospective Students <i class="fa fa-angle-up"></i></div>
+                                    <div class="nav--list">
+                                        <ul>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                            <li class="has-subpage selected"><a href="#">Menu Level 1</a>
+                                                <ul class="subpage">
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                            <li><a href="#">Menu Level 1</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="content--body col-xs-24 col-md-17">
+
+                        <div class="content--body__wrapper">
+
+                            <div class="content--body__header">
+                                <img class="lazy" data-original="{{ app.request.basepath }}/img/subpage-header.jpg" alt="Photo of Person Face"/>
+                                <noscript><img src="{{ app.request.basepath }}/img/subpage-header.jpg" alt="Photo of Person Face"/></noscript>
+                                <div class="row">
+                                    <div class="content--body__header__button col-xs-11 col-xs-push-1 col-xs-pull-0 col-sm-7 col-sm-push-5 col-sm-pull-0">
+                                        <a href="#"><i class="icon-book-open"></i> Apply Now</a>
+                                    </div>
+                                    <div class="content--body__header__button col-xs-11 col-xs-push-0 col-xs-pull-1 col-sm-7 col-sm-push-0 col-sm-pull-5">
+                                        <a href="#"><i class="icon-pointer"></i> Plan a Visit</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h1>H1 Why Choose Memphis?</h1>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <div class="row">
+                                <div class="col-xs-24 col-sm-12">
+                                    <a class="img--callout" href="#">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/subpage-callout-1.jpg" alt="Photo of Person Face"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/subpage-callout-1.jpg" alt="Photo of Person Face"/></noscript>
+                                        <span class="img--callout__banner">Callout Callout</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-24 col-sm-12">
+                                    <a class="img--callout" href="#">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/subpage-callout-2.jpg" alt="Photo of Person Face"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/subpage-callout-2.jpg" alt="Photo of Person Face"/></noscript>
+                                        <span class="img--callout__banner">Callout Callout</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-24 col-sm-12">
+                                    <a class="img--callout" href="#">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/subpage-callout-3.jpg" alt="Photo of Person Face"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/subpage-callout-3.jpg" alt="Photo of Person Face"/></noscript>
+                                        <span class="img--callout__banner">Callout Callout</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-24 col-sm-12">
+                                    <a class="img--callout" href="#">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/subpage-callout-4.jpg" alt="Photo of Person Face"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/subpage-callout-4.jpg" alt="Photo of Person Face"/></noscript>
+                                        <span class="img--callout__banner">Callout Callout</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h2>H2 Headline H2 Headline H2 Headline</h2>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <h3>H3 Headline H3 Headline H3 Headline</h3>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <ul class="style">
+                                <li>Bullet Point
+                                    <ul>
+                                        <li>Child Item</li>
+                                    </ul>
+                                </li>
+                                <li>Bullet Point
+                                    <ul>
+                                        <li>Child Item</li>
+                                        <li>Child Item</li>
+                                        <li>Child Item</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="content--sidebar col-xs-24 col-md-6">
+
+                        <div class="content--sidebar__wrap">
+
+                            <div class="sidebar--box sidebar--box__border col-xs-hidden col-md-show">
+                                <div class="sidebar--box__title">Prospective Students</div>
+                                <div class="nav--list">
+                                    <ul>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                        <li class="has-subpage selected"><a href="#">Menu Level 1</a>
+                                            <ul class="subpage">
+                                                <li><a href="#">Menu Level 2</a></li>
+                                                <li><a href="#">Menu Level 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                        <li><a href="#">Menu Level 1</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sidebar--box sidebar--box__border sidebar--box__news col-xs-hidden col-md-show">
+                                <div class="sidebar--box__title">
+                                    U of M News
+                                    <a href="#">All News <i class="fa fa-angle-right"></i></a>
+                                </div>
+                                <div class="sidebar--news__boxes">
+                                    <div class="sidebar--news__box">
+                                        <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                        <div class="sidebar--news__box__content"><a href="#">U of M Will Hold Orientation for New Graduate Students On August 18</a></div>
+                                    </div>
+                                    <div class="sidebar--news__box">
+                                        <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                        <div class="sidebar--news__box__content"><a href="#">U of M Will Hold Orientation for New Graduate Students On August 18</a></div>
+                                    </div>
+                                    <div class="sidebar--news__box">
+                                        <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                        <div class="sidebar--news__box__content"><a href="#">U of M Will Hold Orientation for New Graduate Students On August 18</a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+
+                            <div class="sidebar--box col-xs-hidden col-md-show">
+                                <div class="slideshow--slider">
+                                    <div class="slideshow--slider__slide" data-cycle-title="Driven by doing" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                        <a href="#">
+                                            <img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                        </a>
+                                    </div>
+                                    <div class="slideshow--slider__slide" data-cycle-title="Driven by doing 2" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                        <a href="#">
+                                            <img class="lazy" data-original="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                            <noscript><img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/></noscript>
+                                        </a>
+                                    </div>
+                                    <div class="slideshow--slider__slide" data-cycle-title="Driven by doing 3" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                        <a href="#">
+                                            <img class="lazy" data-original="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                            <noscript><img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/></noscript>
+                                        </a>
+                                    </div>
+                                    <div class="slideshow--slider__slide" data-cycle-title="Driven by doing 4" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                        <a href="#">
+                                            <img class="lazy" data-original="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                            <noscript><img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/></noscript>
+                                        </a>
+                                    </div>
+
+                                    <div class="slideshow--slider__pager">
+                                        <div class="slideshow--slider__pager__wrapper"></div>
+                                    </div>
+                                    <div class="slideshow--overlay">
+                                        <div class="slideshow--overlay__wrapper"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sidebar--box col-xs-hidden col-md-show">
+                                <a class="img--callout" href="#">
+                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/sidebar-callout-2.jpg" alt="Photo of ..."/>
+                                    <noscript><img src="{{ app.request.basepath }}/img/sidebar-callout-2.jpg" alt="Photo of ..."/></noscript>
+                                    <span class="img--callout__stripes"></span>
+                                    <span class="img--callout__banner">Be a True Blue Tiger</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}

@@ -1,0 +1,320 @@
+{% extends 'layout-alumni.html.twig' %}
+{% set active = ['type--alumni'] %}
+
+{% block title %}Alumni - {% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block cover %}
+
+        <div style="background-color: #232E3A; min-height: 654px;" class="background cover">
+            <div class="container">
+                <div class="type--alumni__cover row">
+                    <div class="type--alumni__switcher">
+                        <div class="type--alumni__switcher__wrapper">
+                            <div class="col-md-9">
+                                <ul class="type--alumni__switcher__lists">
+                                </ul>
+                            </div>
+                            <div class="col-md-15">
+                                <div class="type--alumni__switcher__images">
+                                    <div class="type--alumni__switcher__image" data-cycle-title="Membership Matters! Join Today!">
+                                        <img src="{{ app.request.basepath }}/img/webheader7.jpg" alt="Membership Matters! Join Today!" />
+                                    </div>
+                                    <div class="type--alumni__switcher__image" data-cycle-title="Get the Ultimate Tiger Fan Experience">
+                                        <img src="{{ app.request.basepath }}/img/webheader8.jpg" alt="Get the Ultimate Tiger Fan Experience" />
+                                    </div>
+                                    <div class="type--alumni__switcher__image" data-cycle-title="Welcome to the New Memphis.edu/Alumni. Sign Up Now!">
+                                        <img src="{{ app.request.basepath }}/img/webheader9.jpg" alt="Welcome to the New Memphis.edu/Alumni. Sign Up Now!" />
+                                    </div>
+                                    <div class="type--alumni__switcher__image" data-cycle-title="Law Alumni Chapter Pillars of Excellence: August 22">
+                                        <img src="{{ app.request.basepath }}/img/cover-alumni.jpg" alt="Law Alumni Chapter Pillars of Excellence: August 22" />
+                                    </div>
+                                    <div class="type--alumni__switcher__image" data-cycle-title="Welcome Home! Homecoming: November 1-7">
+                                        <img src="{{ app.request.basepath }}/img/homecoming15webheader.jpg" alt="Welcome Home! Homecoming: November 1-7" />
+                                    </div>
+                                </div>
+                                <div class="type--alumni__switcher__pager">
+                                    <div class="type--alumni__switcher__prev"><i class="fa fa-chevron-circle-left"></i></div>
+                                    <div class="type--alumni__switcher__next"><i class="fa fa-chevron-circle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="type--alumni">
+
+            <div class="type--alumni__group1">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-24 col-md-9">
+                            <div class="type--alumni__form">
+                                <div data-type="signin">
+                                    <span class="type--alumni__form__click"><i class="icon-login"></i> Have an account? Sign In.</span>
+                                    <div class="type--alumni__form__show hidden">
+                                        Sign in
+                                    </div>
+                                </div>
+                                <div data-type="register">
+                                    <span class="type--alumni__form__click"><i class="icon-users"></i> Join the Alumni Association</span>
+                                    <div class="type--alumni__form__show hidden">
+                                        Register
+                                    </div>
+                                </div>
+                                <div data-type="email">
+                                    <span class="type--alumni__form__click"><i class="icon-envelope-letter"></i> Keep in touch! Sign Up for E&#8209;News.</span>
+                                    <div class="type--alumni__form__show show">
+                                        <input type="text" placeholder="First Name">
+                                        <input type="text" placeholder="Last Name">
+                                        <input type="text" placeholder="Primary Email Address">
+                                        <select class="select-style2">
+                                            <option>Preferred Class Year</option>
+                                            <option>Hello</option>
+                                            <option>Hello</option>
+                                        </select>
+                                        <div style="text-align: center;">
+                                            <button type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-xs-24 col-md-12 col-md-offset-1">
+                            <div class="type--alumni__events">
+                                <div class="row">
+                                    <div class="col-xs-24">
+                                        <h3>Alumni Events</h3>
+
+                                        <div class="row">
+                                            <div class="type--alumni__events__event col-xs-24 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-xs-5 col-sm-8 col-md-6">
+                                                        <div class="type--alumni__events__calendar">
+                                                            <div class="type--alumni__events__calendar__month">APR</div>
+                                                            <div class="type--alumni__events__calendar__day">13</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-19 col-sm-16 col-md-18">
+                                                        <div class="type--alumni__events__event__title">True Blue Tailgate</div>
+                                                        <div class="type--alumni__events__event__time"><i class="fa fa-clock-o"></i> 8:00 AM - 4:00 PM (CT)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type--alumni__events__event col-xs-24 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-xs-5 col-sm-8 col-md-6">
+                                                        <div class="type--alumni__events__calendar">
+                                                            <div class="type--alumni__events__calendar__month">APR</div>
+                                                            <div class="type--alumni__events__calendar__day">13</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-19 col-sm-16 col-md-18">
+                                                        <div class="type--alumni__events__event__title">Homecoming</div>
+                                                        <div class="type--alumni__events__event__time"><i class="fa fa-clock-o"></i> 8:00 AM - 4:00 PM (CT)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="type--alumni__events__event col-xs-24 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-xs-5 col-sm-8 col-md-6">
+                                                        <div class="type--alumni__events__calendar">
+                                                            <div class="type--alumni__events__calendar__month">APR</div>
+                                                            <div class="type--alumni__events__calendar__day">13</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-19 col-sm-16 col-md-18">
+                                                        <div class="type--alumni__events__event__title">Pillars of Excellence</div>
+                                                        <div class="type--alumni__events__event__time"><i class="fa fa-clock-o"></i> 8:00 AM - 4:00 PM (CT)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type--alumni__events__event col-xs-24 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-xs-5 col-sm-8 col-md-6">
+                                                        <div class="type--alumni__events__calendar">
+                                                            <div class="type--alumni__events__calendar__month">APR</div>
+                                                            <div class="type--alumni__events__calendar__day">13</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-19 col-sm-16 col-md-18">
+                                                        <div class="type--alumni__events__event__title">Another Event Longer Name Like Really Long</div>
+                                                        <div class="type--alumni__events__event__time"><i class="fa fa-clock-o"></i> 8:00 AM - 4:00 PM (CT)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 20px;" class="type--alumni__view-all">
+                                <a href="#">View All</a>
+                            </div>
+
+                            <div class="type--alumni__news">
+                                <div class="row">
+                                    <div class="col-xs-24">
+                                        <h3>Alumni News</h3>
+                                        <a href="#"><i class="fa fa-chevron-right"></i> Insert Headline About UMAA, Link to Enews</a>
+                                        <a href="#"><i class="fa fa-chevron-right"></i> Awesome Story About U of M, Link to Media Room</a>
+                                        <a href="#"><i class="fa fa-chevron-right"></i> Story About Tiger Athletics</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 30px;" class="type--alumni__view-all">
+                                <a href="#">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background-image: url({{ app.request.basepath }}/img/blank.gif); min-height: 547px;" data-original="{{ app.request.basepath }}/img/bg-grad-cap-darken.png" class="background background--fixed lazy">
+                <div class="type--alumni__get-connected">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-20 col-sm-offset-2 col-md-14 col-md-offset-0">
+                                <div class="h1">Get Connected (Catchy Slogan)</div>
+
+                                    <p>The University of Memphis community is proud and diverse.... "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..</p>
+
+                                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+
+                                    <a href="">How your membership matters <i class="fa fa-chevron-right"></i></a>
+                            </div>
+
+                            <div class="col-sm-20 col-sm-offset-2 col-md-8 col-md-offset-2">
+                                <div class="box--transparent">
+                                    <div class="box--transparent__title">Connect TO fellow tigers</div>
+                                    <ul class="no-style">
+                                        <li><a href="#"><i class="icon-globe"></i>By Region</a></li>
+                                        <li><a href="#"><i class="icon-graduation"></i>By School</a></li>
+                                        <li><a href="#"><i class="icon-users"></i>By Affiliated Group</a></li>
+                                        <li>
+                                            <span class="box--transparent__wrap">
+                                                <select class="select-style">
+                                                    <option>Select Your Affiliated Group</option>
+                                                    <option>Hello</option>
+                                                </select>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="type--alumni__group2">
+                <div class="container">
+                    <div class="row">
+                        <div class="type--alumni__umma-online col-sm-20 col-sm-offset-2 col-md-7 col-md-offset-0">
+                            <div class="h1 h1--small">Follow UMAA Online</div>
+
+                            <div class="row">
+                                <div class="col-md-20">
+                                    <div class="row icon--socialmedia sidebar--socialmedia">
+                                        <div class="col-xs-12 col-sm-8">
+                                            <a class="icon--socialmedia__twitter" href="#"><span class="visuallyhidden">Twitter</span></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8">
+                                            <a class="icon--socialmedia__facebook" href="#"><span class="visuallyhidden">Facebook</span></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8">
+                                            <a class="icon--socialmedia__linkedin" href="#"><span class="visuallyhidden">LinkedIn</span></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8">
+                                            <a class="icon--socialmedia__instagram" href="#"><span class="visuallyhidden">Instagram</span></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8">
+                                            <a class="icon--socialmedia__youtube" href="#"><span class="visuallyhidden">YouTube</span></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8">
+                                            <a class="icon--socialmedia__flickr" href="#"><span class="visuallyhidden">flickr</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type--alumni__benefits-services col-sm-20 col-sm-offset-2 col-md-10 col-md-offset-0">
+                            <div class="h1 h1--small">Benefits & Services</div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <i class="icon-wallet"></i>
+                                </div>
+                                <div class="col-xs-19">
+                                    <h3>Discounts</h3>
+                                    <p>Our newest membership benefit! NAA members and immediate family members receive $1 off admission with your current membership card.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <i class="icon-custom-tickets"></i>
+                                </div>
+                                <div class="col-xs-19">
+                                    <h3>Tickets</h3>
+                                    <p>Our newest membership benefit! NAA members and immediate family members receive $1 off admission with your current membership card.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <i class="icon-plane"></i>
+                                </div>
+                                <div class="col-xs-19">
+                                    <h3>Travel</h3>
+                                    <p>Our newest membership benefit! NAA members and immediate family members receive $1 off admission with your current membership card.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type--alumni__umma-partners col-sm-20 col-sm-offset-2 col-md-7 col-md-offset-0">
+                            <div class="h1 h1--small">UMAA Preferred Partners</div>
+
+                            <p>Save money with UMAA partners, whether you are beginning a career, starting a family or planning for retirement.</p>
+
+                            <div class="type--alumni__umma-partners--slider">
+                                <div class="type--alumni__umma-partners--slider__wrap">
+                                    <a class="type--alumni__umma-partners--slider__prev" href="#"></a>
+                                    <div class="type--alumni__umma-partners--slider__overlay">
+                                        <div class="type--alumni__umma-partners--slider__slide">
+                                            <a href="#">
+                                                <img src="{{ app.request.basepath }}/img/block-liberty-mutual.jpg" alt="Liberty Mutual insurance"/>
+                                            </a>
+                                        </div>
+                                        <div class="type--alumni__umma-partners--slider__slide">
+                                            <a href="#">
+                                                <img src="{{ app.request.basepath }}/img/block-liberty-mutual-horizontal.jpg" alt="Liberty Mutual insurance"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <a class="type--alumni__umma-partners--slider__next" href="#"></a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+{% endblock %}

@@ -1,0 +1,1000 @@
+{% extends 'layout.html.twig' %}
+{% set active = ['type--home'] %}
+
+{% block title %}{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block cover %}
+
+        <div style="background-image: url({{ app.request.basepath }}/img/hero.jpg); min-height: 829px;" class="background cover">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 col-xs-hidden col-md-show">
+                        <div class="home--cover__box">
+                            <div style="float: right;" class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-md-offset-12">
+                                        <div class="home--cover__box__title">Driven by Doing.</div>
+                                        <p>The University of Memphis has a proud tradition of .... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                                        <a class="home--cover__box__link" href="#">How we’re making a difference <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-24 col-sm-12 col-sm-offset-12 col-md-8 col-md-offset-4">
+                        <div class="slideshow">
+                            <div class="slideshow--container">
+                                <div class="slideshow--header col-xs-hidden col-sm-show">
+                                    <div class="slideshow--header__title">News and community</div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="slideshow--wrap">
+                                    <div class="slideshow--slider">
+                                        <div class="slideshow--slider__slide" data-cycle-title="Driven by doing" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                            <a href="#">
+                                                <img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                            </a>
+                                        </div>
+                                        <div class="slideshow--slider__slide" data-cycle-title="Driven by doing 2" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                            <a href="#">
+                                                <img class="lazy" data-original="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                                <noscript><img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/></noscript>
+                                            </a>
+                                        </div>
+                                        <div class="slideshow--slider__slide" data-cycle-title="Driven by doing 3" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                            <a href="#">
+                                                <img class="lazy" data-original="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                                <noscript><img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/></noscript>
+                                            </a>
+                                        </div>
+                                        <div class="slideshow--slider__slide" data-cycle-title="Driven by doing 4" data-cycle-desc="University of Memphis student Joshua Cannon has been selected as a spring 2015 collegiate correspondent for USA TODAY." data-cycle-href="#">
+                                            <a href="#">
+                                                <img class="lazy" data-original="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/>
+                                                <noscript><img src="{{ app.request.basepath }}/img/slider3.jpg" alt="Photo of Joshua Cannon"/></noscript>
+                                            </a>
+                                        </div>
+
+                                        <div class="slideshow--slider__pager">
+                                            <div class="slideshow--slider__pager__wrapper"></div>
+                                        </div>
+                                        <div class="slideshow--overlay">
+                                            <div class="slideshow--overlay__wrapper"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="type--home">
+
+            <div class="wrap--home">
+
+                <div class="wrap--home__prospective-students">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col col-sm-20 col-sm-offset-2 col-md-12 col-md-offset-0">
+
+                                <div class="row">
+                                    <div class="col-xs-24">
+                                        <div class="h1">
+                                            <span class="h1--sub">What You Need to Know</span>
+                                            <span class="h1--title">Prospective Students</span>
+                                            <span class="icon--circle fa fa-angle-up col-sm-hidden"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boxes row mobile-show">
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-0">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Admissions Process <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-2">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Schedule a Visit <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                </div>
+
+                                <div class="boxes row mobile-show">
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-0">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Scholarships and Aid <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-2">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">True Blue Tiger <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Become a True Blue Tiger to receive updates tailored just for you!</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-20 col-sm-offset-2 col-md-12 col-md-offset-0 mobile-show">
+
+                                <div class="wrap--home__prospective-students__apply-online">
+                                    <div class="h3">Apply Online Now</div>
+                                    <div class="boxes boxes--gray row">
+                                        <div class="box col-sm-10 col-md-11">
+                                            <div class="box--title">
+                                                <a class="box--link" href="#">Undergraduate</a>
+                                                <a class="box--link__button" href="#">Apply</a>
+                                            </div>
+
+                                            <p>
+                                                <span class="box--date">Fall Deadline: Dec 31</span>
+                                                Lorem ipsum dolor sit amet, consecutar adipising elit.
+                                            </p>
+                                        </div>
+
+                                        <div class="box col-sm-10 col-sm-offset-2 col-md-11 col-md-offset-1">
+                                            <div class="box--title">
+                                                <a class="box--link" href="#">Law</a>
+                                                <a class="box--link__button" href="#">Apply</a>
+                                            </div>
+
+                                            <p>
+                                                <span class="box--date">Fall Deadline: Dec 31</span>
+                                                Lorem ipsum dolor sit amet, consecutar adipising elit.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="boxes boxes--gray row">
+                                        <div class="box col-sm-10 col-md-11">
+                                            <div class="box--title">
+                                                <a class="box--link" href="#">Graduate</a>
+                                                <a class="box--link__button" href="#">Apply</a>
+                                            </div>
+
+                                            <p>
+                                                <span class="box--date">Fall Deadline: Dec 31</span>
+                                                Lorem ipsum dolor sit amet, consecutar adipising elit.
+                                            </p>
+                                        </div>
+
+                                        <div class="box col-sm-10 col-sm-offset-2 col-md-11 col-md-offset-1">
+                                            <div class="box--title">
+                                                <a class="box--link" href="#">International</a>
+                                                <a class="box--link__button" href="#">Apply</a>
+                                            </div>
+
+                                            <p>
+                                                <span class="box--date">Fall Deadline: Dec 31</span>
+                                                Lorem ipsum dolor sit amet, consecutar adipising elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="background-image: url({{ app.request.basepath }}/img/blank.gif); min-height: 560px;" data-original="{{ app.request.basepath }}/img/bg-students.jpg" class="wrap--home background background--fixed lazy">
+
+                <div class="wrap--home__current-students">
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="wrap--home__current-students__top col-md-show col-xs-hidden">
+                                <ul class="no-style">
+                                    <li><a href="#">Academic Counseling</a></li>
+                                    <li><a href="#">Student Services</a></li>
+                                    <li><a href="#">Student Organizations</a></li>
+                                    <li><a href="#">Majors and Minors</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-sm-20 col-sm-offset-2 col-md-15 col-md-offset-0">
+
+                                <div class="row">
+                                    <div class="col-xs-24">
+                                        <div class="h1 h1--white">
+                                            <span class="h1--sub">Get Involved</span>
+                                            <span class="h1--title">Current Students</span>
+                                            <span class="icon--circle fa fa-angle-up col-sm-hidden"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row boxes--transparent mobile-show">
+
+                                    <div class="col-xs-20 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-lg-11">
+                                        <div class="box--transparent">
+                                            <div class="box--transparent__title">Academics</div>
+                                            <ul class="no-style">
+                                                <li><a href="#"><i class="icon-book-open"></i>Registrar’s Office</a></li>
+                                                <li><a href="#"><i class="icon-check"></i>Degree Compass</a></li>
+                                                <li><a href="#"><i class="icon-graduation"></i>Academic Calendar </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-20 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-lg-11 col-lg-offset-2">
+                                        <div class="box--transparent">
+                                            <div class="box--transparent__title">Get Involved</div>
+                                            <ul class="no-style">
+                                                <li><a href="#"><i class="icon-home"></i>Residential Living</a></li>
+                                                <li><a href="#"><i class="icon-calendar"></i>Event Calendar</a></li>
+                                                <li><a href="#"><i class="icon-users"></i>Volunteer and Service</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-8 col-md-offset-1">
+
+                                <div class="col-md-show col-xs-hidden sidebar--news">
+
+                                    <div class="sidebar--news__wrap">
+                                        <div class="sidebar--news__title sidebar--news__top">
+                                            <div class="sidebar--news__title__right"></div>
+                                            <div class="sidebar--news__title__wrapper">
+                                                U of M News
+                                            </div>
+                                        </div>
+                                        <div class="sidebar--news__boxes">
+                                            <div class="sidebar--news__box">
+                                                <div class="sidebar--news__box__left">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/person1.jpg" alt="Photo of Person Face"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/person1.jpg" alt="Photo of Person Face"/></noscript>
+                                                </div>
+                                                <div class="sidebar--news__box__right">
+                                                    <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                                    <div class="sidebar--news__box__content"><a href="#">U of M Will Hold Orientation for New Graduate Students On August 18</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar--news__box">
+                                                <div class="sidebar--news__box__left">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/person2.jpg" alt="Photo of Person Face"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/person2.jpg" alt="Photo of Person Face"/></noscript>
+                                                </div>
+                                                <div class="sidebar--news__box__right">
+                                                    <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                                    <div class="sidebar--news__box__content"><a href="#">Athletics Director Tom Bowen Named to NCAA Leadership Council</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar--news__box">
+                                                <div class="sidebar--news__box__left">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/person3.jpg" alt="Photo of Person Face"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/person3.jpg" alt="Photo of Person Face"/></noscript>
+                                                </div>
+                                                <div class="sidebar--news__box__right">
+                                                    <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                                    <div class="sidebar--news__box__content"><a href="#">Holiday Inn, Fogelman Executive Conference Center Name New Food and Beverage Director</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar--news__box">
+                                                <div class="sidebar--news__box__left">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/students.jpg" alt="Photo of Person Face"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/students.jpg" alt="Photo of Person Face"/></noscript>
+                                                </div>
+                                                <div class="sidebar--news__box__right">
+                                                    <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                                    <div class="sidebar--news__box__content"><a href="#">Athletics Director Tom Bowen Named to NCAA Leadership Council</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar--news__box">
+                                                <div class="sidebar--news__box__left">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/grad.jpg" alt="Photo of Person Face"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/grad.jpg" alt="Photo of Person Face"/></noscript>
+                                                </div>
+                                                <div class="sidebar--news__box__right">
+                                                    <div class="sidebar--news__box__date">AUG 5 2014</div>
+                                                    <div class="sidebar--news__box__content"><a href="#">Holiday Inn, Fogelman Executive Conference Center Name New Food and Beverage Director</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="sidebar--news__title sidebar--news__bottom">
+                                            <div class="sidebar--news__title__right"></div>
+                                            <div class="sidebar--news__title__wrapper">
+                                                <a href="#">See All News <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="wrap--home">
+
+                <div class="wrap--home__alumni">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col col-sm-20 col-sm-offset-2 col-md-12 col-md-offset-0">
+
+                                <div class="row">
+                                    <div class="col-xs-24">
+                                        <div class="h1">
+                                            <span class="h1--sub">Stay in Touch</span>
+                                            <span class="h1--title">U of M Alumni</span>
+                                            <span class="icon--circle fa fa-angle-up col-sm-hidden"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boxes row mobile-show">
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-0 col-md-12">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Alumni Membership <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-2 col-md-12 col-md-offset-0">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Update Your Information <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                </div>
+
+                                <div class="boxes row mobile-show">
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-0 col-md-12">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Alumni Events <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-2 col-md-12 col-md-offset-0">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Make a Gift <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row mobile-show">
+
+                            <div class="enews--button__wrap col-xs-20 col-xs-offset-2 col-md-6 col-md-offset-9">
+                                <a class="enews--button enews--button__blue" href="#"><i class="icon-envelope-letter"></i>Sign up for Alumni Enews</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="background-image: url({{ app.request.basepath }}/img/blank.gif); min-height: 560px" data-original="{{ app.request.basepath }}/img/bg-students.jpg" class="wrap--home background background--fixed lazy">
+
+                <div class="wrap--home__parents">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col col-sm-20 col-sm-offset-2 col-md-15 col-md-offset-0">
+
+                                <div class="row">
+                                    <div class="col-xs-24">
+                                        <div class="h1 h1--white">
+                                            <span class="h1--sub">Get Informed</span>
+                                            <span class="h1--title">Parents &amp; Family</span>
+                                            <span class="icon--circle fa fa-angle-up col-sm-hidden"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boxes row mobile-show">
+                                    <div class="box box--icon col-xs-20 col-xs-offset-2 col-sm-11 col-sm-offset-0 col-md-11">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#"><span class="box--icon__icon"><i class="icon-info"></i></span> <span class="box--icon__text">U of M FAQ <i class="fa fa-angle-right"></i></span></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                    <div class="box box--icon col-xs-20 col-xs-offset-2 col-sm-11 col-sm-offset-2 col-md-11 col-md-offset-1">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#"><span class="box--icon__icon"><i class="icon-home"></i></span> <span class="box--icon__text">Residential Living and Dining <i class="fa fa-angle-right"></i></span></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                </div>
+
+                                <div class="boxes row mobile-show">
+                                    <div class="box box--icon col-xs-20 col-xs-offset-2 col-sm-11 col-sm-offset-0 col-md-11">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#"><span class="box--icon__icon"><i class="icon-support"></i></span> <span class="box--icon__text">Safety Information <i class="fa fa-angle-right"></i></span></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                    <div class="box box--icon col-xs-20 col-xs-offset-2 col-sm-11 col-sm-offset-2 col-md-11 col-md-offset-1">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#"><span class="box--icon__icon"><i class="icon-present"></i></span> <span class="box--icon__text">Make a Gift <i class="fa fa-angle-right"></i></span></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row mobile-show">
+
+                            <div class="enews--button__wrap col-xs-20 col-xs-offset-2 col-md-6 col-md-offset-9">
+                                <a class="enews--button enews--button__transparent" href="#"><i class="icon-envelope-letter"></i>Sign up for Parent Enews</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="wrap--home__hotline">
+
+                    <div class="container">
+                        <div class="row mobile-show">
+                            <div class="col-md-24">
+                                <ul class="no-style">
+                                    <li class="col-xs-hidden col-md-show"><i class="icon-call-end"></i></li>
+                                    <li class="wrap--home__hotline__heavy">Parent Hotline</li>
+                                    <li><a class="color-gray" href="tel:901-678-2115">901-678-2115</a></li>
+                                    <li class="col-xs-hidden col-sm-show"><a class="color-gray" href="mailto:parents@memphis.edu">parents@memphis.edu</a></li>
+                                    <li class="font--bold"><a href="#">MORE <i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wrap--home">
+
+                <div class="wrap--home__colleges">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-sm-20 col-sm-offset-2 col-md-12 col-md-offset-0">
+                                <div class="h1">
+                                    <span class="h1--sub">Choose Your Path</span>
+                                    <span class="h1--title">Colleges and Schools</span>
+                                    <span class="icon--circle fa fa-angle-up col-sm-hidden"></span>
+                                </div>
+                            </div>
+                            <div class="col col-sm-20 col-sm-offset-2 col-md-8 col-md-offset-4 mobile-show">
+                                <div class="home--quote">
+                                    <div class="home--quote__person__image">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/woman-circle.png" alt="Photo of Person Face"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/woman-circle.png" alt="Photo of Person Face"/></noscript>
+                                    </div>
+                                    <div class="home--quote__info">
+                                        <p>&ldquo;Quote from faculty member about school, programs, benefits, etc. Quote from faculty member about school&rdquo;</p>
+                                        <div class="home--quote__person__name">name of faculty member</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mobile-show">
+                            <div class="col col-md-14 masonry--wrap">
+                                <div id="masonry" class="masonry">
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/L1.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/L1.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>Cecil C. Humphreys School of Law</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Cecil C. Humphrey's School of Law">Cecil C. Humphrey's School of Law</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                    <span>Cecil C. Humphreys School of Law</span>
+                                                    <p>If you are looking for a law school with challenging academics focused on the practice of law, faculty who emphasize teaching and mentoring, an atmosphere of collegiality, connection to a major research</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/C1.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/C1.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>Arts &amp; Sciences</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Arts &amp; Sciences">Arts &amp; Sciences</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>Arts &amp; Sciences</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/R1.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/R1.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>College of Communication &amp; Fine Arts</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="College of Communication &amp; Fine Arts">College of Communication &amp; Fine Arts</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>College of Communication &amp; Fine Arts</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/L2.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/L2.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>College of Education, Health &amp; Human Sciences</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="College of Education, Health &amp; Human Sciences">College of Education, Health &amp; Human Sciences</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>College of Education, Health &amp; Human Sciences</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/L3.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/L3.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>College of Health Studies</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Business &amp; Economics">College of Health Studies</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>College of Health Studies</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/C2.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/C2.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>Business &amp; Economics</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Business &amp; Economics">Business &amp; Economics</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>Business &amp; Economics</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/L5.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/L5.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>Graduate School</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Graduate School">Graduate School</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>Graduate School</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/L3.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/L3.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>Herff College of Engineering</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Herff College of Engineering">Herff College of Engineering</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>Herff College of Engineering</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/C3.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/C3.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>Kemmons Wilson School of Hospitality &amp; Resort Management</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Kemmons Wilson School of Hospitality &amp; Resort Management">Kemmons Wilson School of Hospitality &amp; Resort Management</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>Kemmons Wilson School of Hospitality &amp; Resort Management</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/R3.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/R3.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>Lowenberg School of Nursing</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="Lowenberg School of Nursing">Lowenberg School of Nursing</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>Lowenberg School of Nursing</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/L4.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/L4.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>School of Communication Sciences &amp; Disorders</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="School of Communication Sciences &amp; Disorders">School of Communication Sciences &amp; Disorders</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>School of Communication Sciences &amp; Disorders</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/C4.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/C4.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>School of Public Health</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="School of Public Health">School of Public Health</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>School of Public Health</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__readmore" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item item-bottom">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/R4.jpg" alt="Photography"/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/R4.jpg" alt="Photography"/></noscript>
+                                        <div class="item--layer">
+                                            <div class="item--layer__wrap">
+                                                <div class="item--layer__wrap__center">
+                                                    <span>University College</span>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#" title="University College">University College</a>
+                                        </div>
+
+                                        <div class="item--layer__second visuallyhidden">
+                                            <div class="item--layer__second__wrap">
+                                                <div class="item--layer__second__wrap__center">
+                                                    <div>
+
+                                                        <span>University College</span>
+                                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__link" href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/blank-223x223.png" alt=""/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/blank-223x223.png" alt=""/></noscript>
+                                        <div class="item--layer item--layer__gray">
+                                            <div class="item--layer__content">
+                                                <div class="item--layer__wrap">
+                                                    <div class="item--layer__wrap__center">
+                                                        <span>
+                                                            <i class="icon-book-open"></i>
+                                                            Apply Now
+                                                            <span>Graduate, Undergraduate and Law School</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__gray__link" href="#" title="Apply Now - Graduate, Undergraduate and Law School">Apply Now - Graduate, Undergraduate and Law School</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="lazy" data-original="{{ app.request.basepath }}/img/blank-223x223.png" alt=""/>
+                                        <noscript><img src="{{ app.request.basepath }}/img/blank-223x223.png" alt=""/></noscript>
+                                        <div class="item--layer item--layer__gray">
+                                            <div class="item--layer__content">
+                                                <div class="item--layer__wrap">
+                                                    <div class="item--layer__wrap__center">
+                                                        <span>
+                                                            <i class="icon-graduation"></i>
+                                                            Degrees
+                                                            <span>See All College and Degree Programs</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="item--layer__gray__link" href="#" title="Degrees - See All College and Degree Programs">Degrees - See All College and Degree Programs</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="col col-md-8 col-sm-24 col-md-offset-2">
+                                <div class="row home--programs">
+                                    <div class="col-md-24 col-sm-12">
+                                        <div class="home--programs__box">
+                                            <div class="home--programs__box__title">Undergraduate Programs</div>
+                                            <ul class="no-style">
+                                                <li><a href="#">Undergraduate Majors</a></li>
+                                                <li><a href="#">Minors and Concentrations</a></li>
+                                                <li><a href="#">Undergraduate Catalog</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-24 col-sm-12">
+                                        <div class="home--programs__box">
+                                            <div class="home--programs__box__title">Graduate Programs</div>
+                                            <ul class="no-style">
+                                                <li><a href="#">Undergraduate Majors</a></li>
+                                                <li><a href="#">Minors and Concentrations</a></li>
+                                                <li><a href="#">Undergraduate Catalog</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-24 col-sm-12">
+                                        <div class="home--programs__box">
+                                            <div class="home--programs__box__title">Online Degree Programs</div>
+                                            <ul class="no-style">
+                                                <li><a href="#">Undergraduate Majors</a></li>
+                                                <li><a href="#">Minors and Concentrations</a></li>
+                                                <li><a href="#">Undergraduate Catalog</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-24 col-sm-12">
+                                        <div class="home--programs__box">
+                                            <div class="home--programs__box__title">Law Program</div>
+                                            <ul class="no-style">
+                                                <li><a href="#">Undergraduate Majors</a></li>
+                                                <li><a href="#">Minors and Concentrations</a></li>
+                                                <li><a href="#">Undergraduate Catalog</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-24 col-sm-12">
+                                        <div class="home--programs__box">
+                                            <div class="home--programs__box__title">International Programs</div>
+                                            <ul class="no-style">
+                                                <li><a href="#">Undergraduate Majors</a></li>
+                                                <li><a href="#">Minors and Concentrations</a></li>
+                                                <li><a href="#">Undergraduate Catalog</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}

@@ -1,0 +1,188 @@
+*, a {
+  color: black !important;
+}
+
+body {
+  max-width: 767px;
+}
+
+header,
+.cover--title__wrap
+{
+  position: static;
+}
+
+header,
+.cover--title__wrap,
+.type--page .cover--title
+{
+  height: auto;
+}
+
+.background {
+  min-height: 0 !important;
+}
+
+.type--page .cover {
+  background-image: none;
+}
+
+.header--bg__behind,
+.slideshow,
+.slideshow--slider__pager,
+.slideshow-page--slider__pager,
+.header--menu__button,
+.top--links,
+//.form--email,
+.content--body__header,
+.enews--button,
+.icon--circle,
+.content--body__header__button,
+.img--callout,
+.img--callout__banner,
+.content--sidebar,
+.masonry,
+.type--home img,
+.type--page img,
+.enews--button__wrap,
+#nav--list__top,
+.faculty--headshot,
+footer {
+  display: none !important;
+}
+
+.last-updated {
+  display: block !important;
+}
+
+.box--date,
+.wrap--home .col,
+.type--microsite-subpage-faculty tbody tr,
+.webdirectory--group ul > li > ul
+{
+  margin-top: 10px;
+}
+
+.type--page .cover--title {
+  margin-top: 0;
+}
+
+.box--transparent,
+ul.style > li,
+.webdirectory--group ul > li > ul > li,
+.webdirectory--group ul > li > ul > li
+{
+  margin-bottom: 0 !important;
+}
+
+.wrap--home .h1,
+.home--programs__box,
+.home--programs__box__title,
+.boxes--transparent,
+.box,
+.box p,
+.wrap--home__prospective-students__apply-online,
+ul.style > li,
+.webdirectory--group ul > li > ul > li
+{
+  margin-bottom: 10px;
+}
+
+.content
+{
+  margin-bottom: 20px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+.content--body__wrapper,
+.faculty--box,
+.type--microsite-subpage-faculty .table,
+.type--microsite-subpage-faculty .table--caption,
+.type--microsite-subpage-faculty .table--wrapper,
+.webdirectory--group
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.type--microsite-subpage-faculty h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.home--quote__info,
+.col-xs-offset-2 {
+  margin-left: 0;
+}
+
+.wrap--home__prospective-students__apply-online {
+  padding-top: 10px;
+}
+
+.type--page .cover {
+  padding-bottom: 0;
+}
+
+.type--page .cover--title {
+  padding-top: 0;
+}
+
+.home--programs__box,
+.cover--title__wrap .col-xs-24 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.box--transparent a,
+.type--microsite-subpage-faculty .table--wrapper,
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.box--transparent a i,
+ul.style,
+.webdirectory--group ul > li > ul
+{
+  padding-left: 0;
+}
+
+.type--microsite-subpage-faculty .table--wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.box--transparent__title {
+  padding: 5px 0;
+}
+
+.table {
+  line-height: 1;
+}
+
+//.slideshow {
+//  padding-top: 0;
+//  margin-top: 0;
+//}
+//
+//.slideshow--wrap {
+//  padding: 0 100px;
+//}
+//
+//.slideshow--container {
+//  position: static;
+//}
+
+//.footer--bottom,
+//.footer--bottom__wrapper {
+//  background: none;
+//}
+
+.type--page .cover--title {
+  //min-height: 200px !important;
+}

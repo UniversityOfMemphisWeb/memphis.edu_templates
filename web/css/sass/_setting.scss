@@ -1,0 +1,55 @@
+// color
+$color--blue: #004891;
+$color--blue-2: #00C0F2;
+$color--graydark: #4C4C4C;
+$color--graylight: #929292;
+$color--footer-top-gray: #848383;
+$color--footer-bottom-gray: #A5A4A4;
+$color--white: #FFFFFF;
+$color--black: #000000;
+
+// color - social media
+$color--facebook: #3B5998;
+$color--flickr: #FF0084;
+$color--google-plus: #DD4B39;
+$color--instagram: #517FA4;
+$color--linkedin: #007BB6;
+$color--pinterest: #CB2027;
+$color--rss: #FA9B39;
+$color--twitter: #00ACED;
+$color--vimeo: #44BBFF;
+$color--youtube: #BB0000;
+
+// font
+$font--bitter: Bitter, Georgia, serif;
+$font--lato: Lato, Helvetica, Arial, sans-serif;
+
+// size
+$max-width: 1200px;
+$quote-width: 620px;
+$quote-width-small: 390px;
+
+// path
+// path #{$path-fonts}
+$path-fonts: '../fonts';
+// path #{$path-image}
+$path-image: '../img';
+
+// bootstrap
+$grid-columns: 24;
+$grid-gutter-width: 20px;
+//$screen-xs: 768px;
+//$screen-sm: 380px;
+//$screen-md: 768px;
+//$screen-lg: 1200px;
+//$container-tablet: (962px + $grid-gutter-width);
+//$container-desktop: (1180px + $grid-gutter-width);
+
+//$container-large-desktop: (1140px + $grid-gutter-width);
+//  full > 962. Tablet 962 > 684. Mobile 684 > 0
+
+// simple lines
+$sl-font-path: '../fonts/simple-lines';
+
+// font awesome
+$fa-font-path: '../fonts/font-awesome';

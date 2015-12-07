@@ -1,0 +1,241 @@
+{% extends 'layout.html.twig' %}
+{% set active = ['type--microsite-subpage', 'type--page'] %}
+
+{% block title %}Subpage - Microsite - {% endblock %}
+
+{% block cover %}
+
+        <div class="background cover">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="cover--title">
+
+                        <div class="cover--title__wrap">
+
+                            <div class="col-xs-24 col-md-17 col-md-offset-7">
+                                The Loewenberg School of Nursing The Loewenberg School of Nursing
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="content">
+
+            <div class="content--top">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-18 col-md-offset-6">
+
+                            <ul class="top--links col-xs-hidden col-md-show">
+                                <li class="selected"><a href="#" title="About">About</a></li>
+                                <li><a href="#" title="Programs">Programs</a></li>
+                                <li><a href="#" title="Faculty">Faculty</a></li>
+                                <li><a href="#" title="Research">Research</a></li>
+                                <li><a href="#" title="Alumni">Alumni</a></li>
+                                <li><a href="#" title="Resources">Resources</a></li>
+                                <li><a href="#" title="News">News</a></li>
+                            </ul>
+
+                            <div id="nav--list__top" class="col-xs-show col-md-hidden">
+                                <div class="sidebar--box sidebar--box__border">
+                                    <div class="sidebar--box__title">Prospective Students <i class="fa fa-angle-up"></i></div>
+                                    <div class="nav--list">
+                                        <ul>
+                                            <li><a href="#">Dean's Message</a></li>
+                                            <li><a href="#">Dean's Advisory Council</a></li>
+                                            <li><a href="#">Mission, Vision, and Values</a></li>
+                                            <li class="has-subpage selected"><a href="#">Degree Programs</a>
+                                                <ul class="subpage">
+                                                    <li><a href="#">BSN</a></li>
+                                                    <li><a href="#">RN to BSN</a></li>
+                                                    <li><a href="#">RN to MSN</a></li>
+                                                    <li><a href="#">MSN Programs</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-subpage"><a href="#">Accreditation</a>
+                                                <ul class="subpage">
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">School Hisory</a></li>
+                                            <li class="has-subpage"><a href="#">Quick Facts</a>
+                                                <ul class="subpage">
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="content--body col-xs-24 col-md-17">
+
+                        <div class="breadcrumb col-xs-hidden col-md-show">
+                            <ul>
+                                <li><a href="{{ url('homepage') }}">Home</a></li>
+                                <li><a href="#">School of Nursing</a></li>
+                                <li>About LSON</li>
+                            </ul>
+                        </div>
+
+                        <div class="content--body__wrapper">
+
+                            <h1>About LSON</h1>
+
+                            <p>Welcome to the Loewenberg School of Nursing (LSON), a place that helps you achieve your dream!</p>
+
+                            <p>The Loewenberg School of Nursing (LSON), situated in a diverse metropolitan community, is committed to the preparation of nursing professionals who share a common goal of promoting health of the global community Both undergraduate and graduate programs are accredited by the Commission on Collegiate Nursing Education (CCNE).</p>
+
+                            <p>The mission of the LSON is to provide accessible and innovative higher education preparing leaders who promote health of the global community through excellent teaching, rigorous research, and collaborative practice/service. To fulfill the mission, we are committed to creating a learner –centered educational environment, inspiring life-long learning through excellence in teaching, shaping practice through innovation and partnerships, creating and disseminating knowledge through research and engaged scholarship, and embracing diversity and cultural competence. Our commitment is built on the core values of caring, diversity, integrity, and leadership.</p>
+
+                            <h2>H2 Headline H2 Headline H2 Headline</h2>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <h3>H3 Headline H3 Headline H3 Headline</h3>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <ul class="style">
+                                <li>Bullet Point
+                                    <ul>
+                                        <li><a href="">Child Item</a></li>
+                                    </ul>
+                                </li>
+                                <li>Bullet Point
+                                    <ul>
+                                        <li><a href="">Child Item</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="content--sidebar col-xs-24 col-md-6">
+
+                        <div class="content--sidebar__wrap">
+
+                            <div class="sidebar--box sidebar--box__border col-xs-hidden col-md-show">
+                                <div class="sidebar--box__title">About LSON</div>
+                                <div class="nav--list">
+                                    <ul>
+                                        <li><a href="#">Dean's Message</a></li>
+                                        <li><a href="#">Dean's Advisory Council</a></li>
+                                        <li><a href="#">Mission, Vision, and Values</a></li>
+                                        <li class="has-subpage selected"><a href="#">Degree Programs</a>
+                                            <ul class="subpage">
+                                                <li><a href="#">BSN</a></li>
+                                                <li><a href="#">RN to BSN</a></li>
+                                                <li><a href="#">RN to MSN</a></li>
+                                                <li><a href="#">MSN Programs</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-subpage"><a href="#">Accreditation</a>
+                                            <ul class="subpage">
+                                                <li><a href="#">Menu Level 2</a></li>
+                                                <li><a href="#">Menu Level 2</a></li>
+                                                <li><a href="#">Menu Level 2</a></li>
+                                                <li><a href="#">Menu Level 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">School Hisory</a></li>
+                                        <li class="has-subpage"><a href="#">Quick Facts</a>
+                                            <ul class="subpage">
+                                                <li><a href="#">Menu Level 2</a></li>
+                                                <li><a href="#">Menu Level 2</a></li>
+                                                <li><a href="#">Menu Level 2</a></li>
+                                                <li><a href="#">Menu Level 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="boxes--border">
+                                <div class="boxes row">
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-md-20 col-md-offset-2">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Apply to the Lowenberg
+                                                School of Nursing <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consecutar adipising elit.</p>
+                                    </div>
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-md-20 col-md-offset-2">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Contact <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Become a True Blue Tiger to receive updates tailored just for you!</p>
+                                    </div>
+                                </div>
+
+                                <div class="boxes row">
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-md-20 col-md-offset-2">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Callout 3 <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Become a True Blue Tiger to receive updates tailored just for you!</p>
+                                    </div>
+                                    <div class="box col-xs-20 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-md-20 col-md-offset-2">
+                                        <div class="box--title">
+                                            <a class="box--link" href="#">Callout 4 <i class="fa fa-angle-right"></i></a>
+                                        </div>
+
+                                        <p>Become a True Blue Tiger to receive updates tailored just for you!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}

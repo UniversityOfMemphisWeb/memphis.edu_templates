@@ -1,0 +1,18 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin a_bold_hover {
+  &:after {
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    //      margin-bottom: -1px;
+    height: 1px;
+    color: transparent;
+    content: attr(title);
+    font-weight: 700;
+  }
+}
