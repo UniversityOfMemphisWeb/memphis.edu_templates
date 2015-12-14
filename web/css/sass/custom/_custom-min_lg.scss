@@ -62,8 +62,17 @@
     }
 
     &--search {
-      padding: 15px 0 0 16px;
-      width: 143px;
+      padding: 15px 0 0 10px;
+      width: 153px;
+
+      &:before {
+        right: 11px;
+      }
+
+      input[type="search"] {
+        width: 75%;
+        padding: 3px 14px;
+      }
     }
 
     &--bottom {
@@ -125,6 +134,17 @@
     }
   }
 
+  .button {
+    &-- {
+      &large {
+        i {
+          display: inline;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
   .enews--button {
     padding: 8px 22px 10px 12px;
     width: auto;
@@ -179,6 +199,12 @@
       a {
         padding: 20px 0;
       }
+    }
+  }
+
+  .masonry {
+    .item--layer__second {
+      font-size: 18px;
     }
   }
 

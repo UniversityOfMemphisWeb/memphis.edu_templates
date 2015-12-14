@@ -251,12 +251,21 @@
 
   .masonry {
     .item {
-      width: percentage(1/3);
+      width: percentage((($masonry-width/3)-$masonry-margin-width)/$masonry-width);
     }
 
-    .item-bottom:nth-last-child(-n+3) .item--layer__second {
+    .item--layer__second {
+      height: 208%;
+    }
+
+    .item-bottom:nth-last-child(-n+4) .item--layer__second {
       top: auto;
       bottom: 0;
+    }
+
+    .item--lists {
+      width: percentage(((($masonry-width/3)*2)-$masonry-margin-width)/$masonry-width);
+      margin: 0 percentage($masonry-margin-width/$masonry-width) 2.5% 0;
     }
   }
 

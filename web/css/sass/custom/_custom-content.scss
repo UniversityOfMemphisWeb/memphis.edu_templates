@@ -1439,9 +1439,6 @@ ul.select-style2-selectBox-dropdown-menu {
   }
 
   &__alumni {
-  }
-
-  &__parents {
 
     .box {
       p {
@@ -1456,6 +1453,9 @@ ul.select-style2-selectBox-dropdown-menu {
         @extend %a-hover;
       }
     }
+  }
+
+  &__parents {
   }
 
   &__no-height {
@@ -1496,6 +1496,15 @@ ul.select-style2-selectBox-dropdown-menu {
         }
       }
     }
+
+    &__images {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        margin-bottom: 60px;
+      }
+    }
   }
 
   &__prospective-students {
@@ -1508,6 +1517,7 @@ ul.select-style2-selectBox-dropdown-menu {
         margin-top: 0;
         margin-bottom: 40px;
         color: $color--blue;
+        font-size: 24px;
       }
 
       .boxes {
@@ -1534,6 +1544,10 @@ ul.select-style2-selectBox-dropdown-menu {
       li {
         float: left;
         padding: 0 10px;
+
+        &:first-child {
+          padding-left: 0;
+        }
 
         > i {
           float: right;
@@ -1562,7 +1576,7 @@ ul.select-style2-selectBox-dropdown-menu {
 
 .sidebar--news__wrap {
   position: absolute;
-  top: 145px;
+  top: 80px;
   //  right: -10px;
   z-index: 500;
   width: 100%;
@@ -1650,13 +1664,13 @@ ul.select-style2-selectBox-dropdown-menu {
   float: left;
   padding: 40px 20px 60px;
   width: 100%;
-  border-width: 1px 1px 0;
+  border-width: 0 1px 1px;
   border-style: solid;
   border-color: #E8E8E8;
 
-  &:first-child {
+  /*&:first-child {
     border-top-width: 0;
-  }
+  }*/
 
   &:nth-child(even) {
     background-color: #f9f9f9;
@@ -1734,11 +1748,15 @@ $sidebar_width: 340px;
 }
 
 .masonry {
+  &--wrap {
+    margin-bottom: 40px;
+  }
+
   .item {
     position: relative;
     float: left;
-    padding: 0 1px 1px 0;
-    width: 50%;
+    width: percentage((($masonry-width/2)-$masonry-margin-width)/$masonry-width);
+    margin: 0 percentage($masonry-margin-width/$masonry-width) 2.5% 0;
 
     &, a {
       color: $color--white;
@@ -1754,11 +1772,14 @@ $sidebar_width: 340px;
     }
   }
 
-  .item--layer, .item--layer__second, .item--layer__content {
+  .item--layer,
+  .item--layer__second,
+  .item--layer__content {
     @include transition(background-color 0.3s ease-in-out);
   }
 
-  .item--layer, .item--layer__second {
+  .item--layer,
+  .item--layer__second {
     position: absolute;
     top: 0;
 
@@ -1776,7 +1797,6 @@ $sidebar_width: 340px;
 
       &__center {
         display: table-cell;
-        overflow: auto;
         overflow: hidden;
         padding: 5px 0;
         vertical-align: middle;
@@ -1842,7 +1862,6 @@ $sidebar_width: 340px;
     }
 
     &__wrap {
-
       &__center {
         text-align: center;
       }
@@ -1869,34 +1888,27 @@ $sidebar_width: 340px;
     }
 
     &__readmore {
-      position: absolute;
-      bottom: 0;
       display: inline-block;
-      width: 100%;
-      height: 64px;
       color: $color--white;
-      text-align: center;
       text-transform: uppercase;
-      letter-spacing: 0.150em;
+      letter-spacing: 0.100em;
       font-weight: 700;
-      line-height: 64px;
-      @include transition(all 0.3s ease-in-out);
 
       i {
-        margin-left: 8px;
+        margin-left: 4px;
         font-size: 22px;
       }
 
       &:focus,
       &:hover {
-        background-color: $color--blue-2;
+        color: $color--blue-2;
       }
     }
   }
 
   .item--layer__second {
     z-index: 700;
-    height: 200%;
+    height: 205%;
     background-color: $color--blue;
     background-color: rgba($color--blue, 0.9);
 
@@ -1932,6 +1944,69 @@ $sidebar_width: 340px;
   .item-bottom:nth-last-child(-n+2) .item--layer__second {
     top: auto;
     bottom: 0;
+  }
+
+  .item--lists {
+    width: 100%;
+    margin: 0;
+    padding: 8px percentage(30px/$item-lists-width) 40px;
+    background-color: #FEFDFD;
+    border: 1px solid #E0E0E0;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      line-height: 24px;
+
+      li {
+        a {
+
+        }
+      }
+    }
+
+    > ul {
+      float: left;
+      width: 100%;
+
+      > li {
+        float: left;
+        width: percentage(((($item-lists-width/2)*1)-($item-list-margin*2))/$item-lists-width);
+        margin: 0 percentage($item-list-margin/$item-lists-width);
+        border-bottom: 1px solid #E1E1E1;
+        padding: 24px 0 18px;
+        color: $color--blue;
+        font-size: 17px;
+        line-height: 24px;
+
+        > a {
+          position: relative;
+          padding-bottom: 10px;
+          color: $color--blue;
+          font-weight: 700;
+
+          > i {
+            position: absolute;
+            margin: 4px 0 0 6px;
+            color: #A2A2A2;
+            font-size: 14px;
+          }
+        }
+
+        > ul {
+
+          > li {
+            color: $color--graydark;
+            font-size: 14px;
+
+            > a {
+              color: $color--graydark;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

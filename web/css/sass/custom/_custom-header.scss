@@ -306,6 +306,10 @@ header {
       font-family: 'FontAwesome';
     }
 
+    a {
+      display: none;
+    }
+
     input[type="search"] {
       //    float: right;
       margin: 0;

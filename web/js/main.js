@@ -331,7 +331,10 @@ $(document).ready(function() {
             $masonry_item = $('.item', $masonry),
             $masonry_item_layer = $('.item--layer', $masonry_item),
             $masonry_item_layer_second = $('.item--layer__second', $masonry_item),
-            $masonry_item_link = $('.item--layer__link', $masonry_item);
+            $masonry_item_link = $('.item--layer__link', $masonry_item),
+            $masonry_lists = $('.item--lists', $masonry),
+            $masonry_lists_link = $('> ul > li', $masonry_lists),
+            masonry_list_open = '';
 
         $html.on('click', function() {
             $masonry_item_layer_second.each(function() {
@@ -383,6 +386,61 @@ $(document).ready(function() {
                 );
             });
         });
+
+        var masonry_list = function(that, type) {
+            var $that = $(that),
+                that_link = $(' > a', $that),
+                $that_lists = $(' > ul', $that),
+                that_text = $.trim(that_link.text()),
+                $that_icon = $('i', that_link),
+                type = typeof type !== 'undefined' ? Boolean(type) : false;
+
+            if (type) {
+                if (that_text !== masonry_list_open) {
+                    masonry_list_open = that_text;
+                    $that.addClass('selected');
+                    $that_icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+                    if ($that_lists.hasClass(class_vh)) {
+                        $that_lists.slideUp(0, function() {
+                            $that_lists.removeClass(class_vh)
+                               .slideDown('fast');
+                        });
+                    }
+                    return;
+                } else {
+                    masonry_list_open = '';
+                }
+            }
+
+            $that.removeClass('selected');
+            $that_icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            if (!$that_lists.hasClass(class_vh)) {
+                $that_lists.slideUp('fast',function() {
+                    $that_lists.addClass(class_vh)
+                       .slideDown(0);
+                });
+            }
+        };
+
+        var masonry_lists_close_all = function() {
+            $masonry_lists_link.each(function() {
+                masonry_list(this);
+            });
+        };
+
+        $masonry_lists_link.on('click', function(e) {
+            masonry_lists_close_all();
+            masonry_list(this, true);
+
+            if ($(e.target).is('.item--lists__link, i')) {
+                e.stopPropagation();
+                return false;
+            }
+        });
+
+        masonry_lists_close_all();
     }
 
     $circle.on('click', function(e) {

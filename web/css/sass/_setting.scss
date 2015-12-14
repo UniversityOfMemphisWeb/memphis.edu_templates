@@ -28,6 +28,10 @@ $font--lato: Lato, Helvetica, Arial, sans-serif;
 $max-width: 1200px;
 $quote-width: 620px;
 $quote-width-small: 390px;
+$masonry-width: 1180px;
+$masonry-margin-width: 35px;
+$item-lists-width: 875px;
+$item-list-margin: 30px;
 
 // path
 // path #{$path-fonts}
@@ -48,8 +52,11 @@ $grid-gutter-width: 20px;
 //$container-large-desktop: (1140px + $grid-gutter-width);
 //  full > 962. Tablet 962 > 684. Mobile 684 > 0
 
-// simple lines
+// simple line
 $sl-font-path: '../fonts/simple-lines';
+
+// simple line pro
+$slp-font-path: '../fonts/simple-line-icons-pro';
 
 // font awesome
 $fa-font-path: '../fonts/font-awesome';
