@@ -1610,8 +1610,10 @@ header nav > ul > li:focus > a, header nav > ul > li:hover > a, header nav > ul 
 .type--alumni-subpage .sidebar--socialmedia a:focus, .type--alumni-subpage .sidebar--socialmedia a:hover { background-color: #00C0F2 !important; }
 .type--page { color: #4C4C4C; }
 .type--page h1, .type--page .h1 { display: inline-block; padding-bottom: 10px; border-bottom: 4px solid #F0F0F0; }
-.type--page .cover { padding-bottom: 40px; background-image: url(../img/bg-tiger.jpg); }
+.type--page .cover { padding-bottom: 40px; background-color: #232E3A; background-image: url(../img/bg-tiger.jpg); }
 .type--page .cover--title { margin-top: 83px; padding-top: 40px; }
+.type--microsite__logo .cover { background-image: none; }
+.type--microsite__logo .header--box { display: none !important; }
 .type--microsite-subpage-faculty h1, .type--microsite-subpage-faculty h3 { font-size: 22px; }
 .type--microsite-subpage-faculty h2, .type--microsite-subpage-faculty h4 { font-size: 18px; }
 .type--microsite-subpage-faculty h1, .type--microsite-subpage-faculty h4 { font-weight: 700; }
@@ -1789,6 +1791,8 @@ ul.select-style2-selectBox-dropdown-menu a { background: none; color: #231F20; p
 
 .content { position: relative; margin-bottom: 40px; }
 .content img { max-width: 100%; height: auto; }
+.content--logo { position: relative; width: 100%; margin: 14px 0; text-align: center; }
+.content--logo a { display: block; }
 .content--top { border-top: 1px solid #DADADA; border-bottom: 1px solid #DADADA; background-color: #F9F9F9; }
 .content--top .sidebar--box { position: relative; margin: 12px 0; }
 .content--top .sidebar--box .nav--list { position: absolute; z-index: 800; display: none; padding: 16px 30px 25px; border: 1px solid #E0E0E0; border-top: 0; font-size: 18px; }
@@ -1990,6 +1994,8 @@ footer { border-top: 1px solid #C4C5C2; }
   .type--alumni__get-connected .box--transparent { margin-top: 0; }
   .type--alumni__join-membership { padding: 44px 0 20px; }
   .type--page .cover--title { margin-top: 167px; padding-top: 70px; }
+  .type--microsite__logo .cover { padding-bottom: 70px; }
+  .type--microsite__logo .cover--title { padding-top: 93px; font-size: 36px; letter-spacing: 0.025em; }
   .icon-custom-tickets { width: 65px; height: 49px; background-size: 65px 49px; }
   header { top: 37px; height: 130px; }
   .header--bg { left: 30%; }
@@ -2045,6 +2051,7 @@ footer { border-top: 1px solid #C4C5C2; }
   .home--quote__person__name { text-align: left; }
   .top--links { width: auto; margin-left: 0; }
   .top--links li { float: left; }
+  .content--logo { position: absolute; top: -214px; left: 0; }
   .content--body { float: right; }
   .content--sidebar { margin-top: -105px; }
   .content--sidebar__wrap { background-color: #FFFFFF; }
@@ -3566,7 +3573,7 @@ you can use the generic selector below, but it's slower:
   header, .cover--title__wrap { position: static; }
   header, .cover--title__wrap, .type--page .cover--title { height: auto; }
   .background { min-height: 0 !important; }
-  .type--page .cover { background-image: none; }
+  .type--page .cover { background-color: transparent; background-image: none; }
   .header--bg__behind, .slideshow, .slideshow--slider__pager, .slideshow-page--slider__pager, .header--menu__button, .top--links, .content--body__header, .enews--button, .icon--circle, .content--body__header__button, .img--callout, .img--callout__banner, .content--sidebar, .masonry, .type--home img, .type--page img, .enews--button__wrap, #nav--list__top, .faculty--headshot, footer { display: none !important; }
   .last-updated { display: block !important; }
   .box--date, .wrap--home .col, .type--microsite-subpage-faculty tbody tr, .webdirectory--group ul > li > ul { margin-top: 10px; }

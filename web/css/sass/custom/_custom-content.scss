@@ -994,6 +994,7 @@
     .cover {
       //min-height: 224px;
       padding-bottom: 40px;
+      background-color: #232E3A;
       background-image: url(#{$path-image}/bg-tiger.jpg);
     }
 
@@ -1005,6 +1006,18 @@
   }
 
   &microsite {
+    &__ {
+      &logo {
+        .cover {
+          background-image: none;
+        }
+
+        .header--box {
+          display: none !important;
+        }
+      }
+    }
+
     &-subpage {
       &-faculty {
 
@@ -1968,6 +1981,17 @@ $home--programs-width: 380px;
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  &--logo {
+    position: relative;
+    width: 100%;
+    margin: 14px 0;
+    text-align: center;
+
+    a {
+      display: block;
+    }
   }
 
   &--top {

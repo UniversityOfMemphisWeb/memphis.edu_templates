@@ -106,6 +106,24 @@
         padding-top: 70px;
       }
     }
+
+    &microsite {
+      &__ {
+        &logo {
+          .cover {
+            padding-bottom: 70px;
+
+            &-- {
+              &title {
+                padding-top: 93px;
+                font-size: 36px;
+                letter-spacing: 0.025em;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .icon {
@@ -522,6 +540,12 @@
   }
 
   .content {
+    &--logo {
+      position: absolute;
+      top: -214px;
+      left: 0;
+    }
+
     &--body {
       float: right;
     }

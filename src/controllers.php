@@ -18,6 +18,13 @@ $app->get(
 )->bind('microsite');
 
 $app->get(
+    '/microsite-logo/',
+    function (Request $request) use ($app) {
+        return $app['twig']->render('microsite-logo.html.twig');
+    }
+)->bind('microsite-logo');
+
+$app->get(
     '/microsite/subpage/',
     function (Request $request) use ($app) {
         return $app['twig']->render('microsite-subpage.html.twig');
