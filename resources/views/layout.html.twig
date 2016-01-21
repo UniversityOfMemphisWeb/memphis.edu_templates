@@ -35,11 +35,43 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ app.request.basepath }}/favicons/mstile-144x144.png">
     <meta name="theme-color" content="#00498f">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="{{ app.request.basepath }}/js/plugins.js"></script>
+    <script src="{{ app.request.basepath }}/js/main.js"></script>
+
 </head>
 <body>
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+{% if app.request.query.get('alert') is not null %}
+        <div class="header--alert" style="position: absolute; z-index: 999;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-16 col-md-offset-8">
+                        <div class="header--alert__wrapper">
+                            <div class="header--alert__wrapper__icon">
+                                <i class="fa fa-exclamation-circle"></i>
+                            </div>
+                            <div class="header--alert__wrapper__text">
+                                <span>University closed due to inclement weather</span>
+                                <a href="#" style="color: #{{ app.request.query.get('color') }} !important;">More <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery('header').css('top', '87px');
+                jQuery('div.type--home').css('margin-top', '69px');
+            });
+        </script>
+{% endif %}
 
     <header>
         <div class="header--bg__behind"></div>
@@ -499,26 +531,6 @@
             </div>
         </div>
 
-{% if app.request.query.get('alert') is not null %}
-        <div class="header--alert" style="background-color: #{{ app.request.query.get('bgColor') }}; color: #{{ app.request.query.get('color') }} !important;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-16 col-md-offset-8">
-                        <div class="header--alert__wrapper">
-                            <div class="header--alert__wrapper__icon">
-                                <i class="fa fa-exclamation-circle"></i>
-                            </div>
-                            <div class="header--alert__wrapper__text">
-                                <span>University closed due to inclement weather</span>
-                                <a href="#" style="color: #{{ app.request.query.get('color') }} !important;">More <i class="fa fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-{% endif %}
-
     </header>
 
     <div{% if active is not empty %} class="{{ active|join(' ') }}"{% endif %}>
@@ -733,11 +745,7 @@
         <a href="">Email Preferences <i class="fa fa-angle-right"></i></a>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="{{ app.request.basepath }}/js/plugins.js"></script>
 {% block scripts %}{% endblock %}
-    <script src="{{ app.request.basepath }}/js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!-- <script>
