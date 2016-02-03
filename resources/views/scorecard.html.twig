@@ -1,0 +1,79 @@
+{% extends 'layout.html.twig' %}
+{% set active = ['type--scorecard', 'type--page'] %}
+
+{% block title %}Scorecard - {% endblock %}
+
+{% block cover %}
+
+        <div class="background cover">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="cover--title">
+
+                        <div class="cover--title__wrap">
+
+                            <div class="col-xs-24 col-md-17 col-md-offset-7">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="content">
+
+            <div class="content--top">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-17 col-md-offset-7">
+
+                            <div class="breadcrumb col-xs-hidden col-md-show">
+                                <ul>
+                                    <li><a href="{{ url('homepage') }}">Home</a></li>
+                                    <li>U of M Scorecard</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="content--body col-xs-24 col-md-17">
+
+                        <div class="content--body__wrapper">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}

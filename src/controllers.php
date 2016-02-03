@@ -66,6 +66,13 @@ $app->get(
     }
 )->bind('alumni-subpage');
 
+$app->get(
+    '/scorecard/',
+    function (Request $request) use ($app) {
+        return $app['twig']->render('scorecard.html.twig');
+    }
+)->bind('scorecard');
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
