@@ -1,11 +1,14 @@
 {% extends 'layout.html.twig' %}
 {% set active = ['type--scorecard', 'type--page'] %}
-
+{% set header_resources = 'no' %}
 {% block title %}Scorecard - {% endblock %}
+{% block scripts %}
+    <script src="{{ app.request.basepath }}/js/vendor/bootstrap/javascripts/bootstrap/tooltip.js"></script>
+{% endblock %}
 
 {% block cover %}
 
-        <div class="background cover">
+        <div style="background-image: url({{ app.request.basepath }}/img/bg-scorecard.jpg); min-height: 230px;" class="background cover">
 
             <div class="container">
 
@@ -41,7 +44,7 @@
 
                     <div class="row">
 
-                        <div class="col-md-17 col-md-offset-7">
+                        <div class="col-md-23 col-md-offset-1">
 
                             <div class="breadcrumb col-xs-hidden col-md-show">
                                 <ul>
@@ -62,9 +65,620 @@
 
                 <div class="row">
 
-                    <div class="content--body col-xs-24 col-md-17">
+                    <div class="content--body col-xs-24">
 
                         <div class="content--body__wrapper">
+
+                            <div class="row">
+                                <div class="col-xs-24 col-md-13">
+                                    <h1>UofM Scorecard: How We Compare</h1>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-24 col-md-13">
+                                    <p>The scorecard rates UofM in comparison to 14 peer institutions nationally and to the eight sister Tennessee public, four-year universities on student performance and financial data. In each category, UofM is ranked in the top, middle or bottom third according to the color code in the key at right.</p>
+
+                                    <div style="margin-bottom: 24px;">
+                                        The comparison institutions:
+
+                                        <div class="visible-xs-block visible-sm-inline">
+                                            <div style="margin-left: 0;" class="scorecard--button">
+                                                <span>Peer</span>
+                                                <div id="scorecard-button-peer" class="scorecard--button__info">
+                                                    <div class="scorecard--button__info__wrap">
+                                                        <div class="scorecard--button__info__title">
+                                                            Peer Institutions <i class="fa fa-times scorecard--button__close"></i>
+                                                        </div>
+
+                                                        <div class="scorecard--button__info__lists">
+                                                            <ul>
+                                                                <li><a href="">Cleveland State University</a></li>
+                                                                <li>CUNY City College</li>
+                                                                <li>Florida Agricultural and Mechanical University</li>
+                                                                <li>Georgia State University</li>
+                                                                <li>Indiana University-Purdue University-Indianapolis</li>
+                                                                <li>Portland State University</li>
+                                                                <li>Temple University</li>
+                                                                <li>University of Alabama at Birmingham</li>
+                                                                <li>University of Cincinnati-Main Campus</li>
+                                                                <li>University of Illinois at Chicago</li>
+                                                                <li>Cleveland State University</li>
+                                                                <li>CUNY City College</li>
+                                                                <li>Florida Agricultural and Mechanical University</li>
+                                                                <li>Georgia State University</li>
+                                                                <li>Indiana University-Purdue University-Indianapolis</li>
+                                                                <li>Portland State University</li>
+                                                                <li>Temple University</li>
+                                                                <li>University of Alabama at Birmingham</li>
+                                                                <li>University of Cincinnati-Main Campus</li>
+                                                                <li>University of Illinois at Chicago</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="scorecard--button">
+                                                <span>Tennessee</span>
+                                                <div id="scorecard-button-tennessee" class="scorecard--button__info">
+                                                    <div class="scorecard--button__info__wrap">
+                                                        <div class="scorecard--button__info__title">
+                                                            Tennessee Institutions <i class="fa fa-times scorecard--button__close"></i>
+                                                        </div>
+
+                                                        <div class="scorecard--button__info__lists">
+                                                            <ul>
+                                                                <li><a href="">Cleveland State University</a></li>
+                                                                <li>CUNY City College</li>
+                                                                <li>Florida Agricultural and Mechanical University</li>
+                                                                <li>Georgia State University</li>
+                                                                <li>Indiana University-Purdue University-Indianapolis</li>
+                                                                <li>Portland State University</li>
+                                                                <li>Temple University</li>
+                                                                <li>University of Alabama at Birmingham</li>
+                                                                <li>University of Cincinnati-Main Campus</li>
+                                                                <li>University of Illinois at Chicago</li>
+                                                                <li>Cleveland State University</li>
+                                                                <li>CUNY City College</li>
+                                                                <li>Florida Agricultural and Mechanical University</li>
+                                                                <li>Georgia State University</li>
+                                                                <li>Indiana University-Purdue University-Indianapolis</li>
+                                                                <li>Portland State University</li>
+                                                                <li>Temple University</li>
+                                                                <li>University of Alabama at Birmingham</li>
+                                                                <li>University of Cincinnati-Main Campus</li>
+                                                                <li>University of Illinois at Chicago</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                        <em>
+                                            Source, unless otherwise noted:<br>
+                                            <a href="#">National Center for Education Statistics.</a>
+                                        </em>
+                                    </p>
+                                </div>
+
+                                <div class="col-xs-24 col-md-10 col-md-offset-1">
+                                    <div class="scorecard--box scorecard--box__stands">
+                                        <div class="scorecard--box__title">
+                                            <h2>Key: Where UofM Stands</h2>
+                                        </div>
+
+                                        <div class="scorecard--box__interior">
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-6">
+                                                    <div class="scorecard--box__interior__title">
+                                                        Top
+                                                        <span>Third</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="scorecard--box__interior__title">
+                                                        Middle
+                                                        <span>Third</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="scorecard--box__interior__title">
+                                                        Bottom
+                                                        <span>Third</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="scorecard--box__interior__title">
+                                                        N/A
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-6">
+                                                    <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div title="Bottom Third" class="scorecard--box__pie scorecard--box__pie__bottom"></div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div title="N/A" class="scorecard--box__pie"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-24 col-md-12">
+                                    <div class="scorecard--box">
+                                        <div class="scorecard--box__title">
+                                            <i class="scorecard--box__close fa fa-angle-up"></i> <h2>Admissions</h2>
+                                        </div>
+
+                                        <div class="scorecard--box__interior">
+                                            <div class="row scorecard--box__interior__top">
+                                                <div class="col-xs-14 col-sm-17 scorecard--box__interior__title">
+                                                    Institutional Characteristics
+                                                </div>
+
+                                                <div class="col-xs-10 col-sm-7 scorecard--box__interior__ranking">
+                                                    <div class="scorecard--box__interior__ranking__title">Ranking</div>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            PEER
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            TENN.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Enrollment:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            21,059 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Non-Traditional Enrollment:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            26% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Percent Admitted:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            47% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Admissions Yield:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            44% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-24 col-md-12">
+                                    <div class="scorecard--box">
+                                        <div class="scorecard--box__title">
+                                            <i class="scorecard--box__close fa fa-angle-up"></i> <h2>Student Success</h2>
+                                        </div>
+
+                                        <div class="scorecard--box__interior">
+                                            <div class="row scorecard--box__interior__top">
+                                                <div class="col-xs-14 col-sm-17 scorecard--box__interior__title">
+                                                    Institutional Characteristics
+                                                </div>
+
+                                                <div class="col-xs-10 col-sm-7 scorecard--box__interior__ranking">
+                                                    <div class="scorecard--box__interior__ranking__title">Ranking</div>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            PEER
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            TENN.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Total Degrees Awarded
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            4,412 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Bachelor’s Degrees Awarded:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            2,991 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Master’s Degrees Awarded:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            1,060 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Doctoral/Professional Degrees Awarded:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            260 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row scorecard--box__interior__row">
+                                                <div class="col-xs-14 col-sm-17">
+                                                    <div class="row">
+                                                        <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                            Post-Bachelor’s
+                                                                                                        Cert. Awarded:
+                                                        </div>
+                                                        <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                            101 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-10 col-sm-7">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                        </div>
+                                                        <div title="Top Third" class="col-xs-12">
+                                                            <div class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-24">
+                                    <div class="scorecard--box">
+                                        <div class="scorecard--box__title">
+                                            <i class="scorecard--box__close fa fa-angle-up"></i> <h2>Financial</h2>
+                                        </div>
+
+                                        <div class="scorecard--box__interior">
+                                            <div class="row">
+                                                <div class="col-xs-24 col-md-12">
+                                                    <div class="row scorecard--box__interior__top">
+                                                        <div class="col-xs-14 col-sm-17 scorecard--box__interior__title">
+                                                            Institutional Characteristics
+                                                        </div>
+
+                                                        <div class="col-xs-10 col-sm-7 scorecard--box__interior__ranking">
+                                                            <div class="scorecard--box__interior__ranking__title">Ranking</div>
+
+                                                            <div class="row">
+                                                                <div class="col-xs-12">
+                                                                    PEER
+                                                                </div>
+                                                                <div class="col-xs-12">
+                                                                    TENN.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row scorecard--box__interior__row">
+                                                        <div class="col-xs-14 col-sm-17">
+                                                            <div class="row">
+                                                                <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                                    Percentage of First Time Undergraduates Receiving Financial Aid:
+                                                                </div>
+                                                                <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                                    97% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-10 col-sm-7">
+                                                            <div class="row">
+                                                                <div class="col-xs-12">
+                                                                    <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                                </div>
+                                                                <div class="col-xs-12">
+                                                                    <div title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-24 col-md-12">
+                                                    <div class="row col-xs-hidden col-md-show scorecard--box__interior__top">
+                                                        <div class="col-xs-14 col-sm-17 scorecard--box__interior__title">
+                                                            Institutional Characteristics
+                                                        </div>
+
+                                                        <div class="col-xs-10 col-sm-7 scorecard--box__interior__ranking">
+                                                            <div class="scorecard--box__interior__ranking__title">Ranking</div>
+
+                                                            <div class="row">
+                                                                <div class="col-xs-12">
+                                                                    PEER
+                                                                </div>
+                                                                <div class="col-xs-12">
+                                                                    TENN.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row scorecard--box__interior__row">
+                                                        <div class="col-xs-14 col-sm-17">
+                                                            <div class="row">
+                                                                <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                                    Published In-District Tuition and Fees:
+                                                                </div>
+                                                                <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                                    $8,619 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-10 col-sm-7">
+                                                            <div class="row">
+                                                                <div class="col-xs-12">
+                                                                    <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                                </div>
+                                                                <div class="col-xs-12">
+                                                                    <div title="Bottom Third" class="scorecard--box__pie scorecard--box__pie__bottom"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row scorecard--box__interior__row">
+                                                        <div class="col-xs-14 col-sm-17">
+                                                            <div class="row">
+                                                                <div class="col-xs-24 col-sm-16 col-md-12 scorecard--box__interior__row__title">
+                                                                    Endowment Assets per FTE Enrollment:
+                                                                </div>
+                                                                <div class="col-xs-24 col-sm-8 col-md-12 scorecard--box__number">
+                                                                    $11,811 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-10 col-sm-7">
+                                                            <div class="row">
+                                                                <div class="col-xs-12">
+                                                                    <div title="Middle Third" title="Middle Third" class="scorecard--box__pie scorecard--box__pie__middle"></div>
+                                                                </div>
+                                                                <div class="col-xs-12">
+                                                                    <div title="Top Third" class="scorecard--box__pie scorecard--box__pie__top"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-24">
+                                    <div class="scorecard--box">
+                                        <div class="scorecard--box__title">
+                                            <i class="scorecard--box__close fa fa-angle-up"></i> <h2>Other Accolades</h2>
+                                        </div>
+
+                                        <div class="scorecard--box__interior">
+                                            <div class="row">
+                                                <div class="col-xs-24 col-md-12">
+                                                    <ul class="scorecard--lists__star">
+                                                        <li>Ranked in the Top 10 for Internships by US News and World Report</li>
+
+                                                        <li>The Helen Hardin Honors Program at the UofM is the largest honors program in our state. In the Fall of 2015, 13.3% of undergraduate students were enrolled in the program.</li>
+
+                                                        <li>We are consistently ranked as the safest large campus in Tennessee by the Tennessee Bureau of Investigation</li>
+
+                                                        <li>PreLaw Magazine listed the University of Memphis Cecil C. Humphreys School of Law as having the best law school facility in the U.S.</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-xs-24 col-md-12">
+                                                    <h2 style="font-size: 24px; font-weight: 700; letter-spacing: normal; line-height: 28px; text-transform: none;">UofM Programs in the 2014 U.S. News and World Report Rankings</h2>
+
+                                                    <ul class="scorecard--lists__rankings">
+                                                        <li><strong>Audiology</strong> (#12)</li>
+                                                        <li><strong>Speech-Language Pathology</strong> (#15)</li>
+                                                        <li><strong>Rehabilitation Counseling</strong> (#21)</li>
+                                                    </ul>
+
+                                                    <div style="margin-top: 40px;" class="scorecard--button">
+                                                        <span>See More Rankings</span>
+                                                        <div id="scorecard-button-rankings" class="scorecard--button__info">
+                                                            <div class="scorecard--button__info__wrap">
+                                                                <div class="scorecard--button__info__title">
+                                                                    Additional U.S. News & World Report Rankings <i class="fa fa-times scorecard--button__close"></i>
+                                                                </div>
+
+                                                                <div class="scorecard--button__info__lists">
+                                                                    <ul>
+                                                                        <li>Clinical Psychology (#79)</li>
+                                                                        <li>Public Affairs (#104)</li>
+                                                                        <li>Online MBA (#66)</li>
+                                                                        <li>Math (#126)</li>
+                                                                        <li>Law (#142)</li>
+                                                                        <li>Education (#180)</li>
+                                                                        <li>Fine Arts (#177)</li>
+                                                                        <li>Nursing (#193)</li>
+                                                                        <li>Biological Sciences (#209)</li>
+                                                                        <li>Psychology (#117)</li>
+                                                                        <li>Clinical Psychology (#79)</li>
+                                                                        <li>Public Affairs (#104)</li>
+                                                                        <li>Online MBA (#66)</li>
+                                                                        <li>Math (#126)</li>
+                                                                        <li>Law (#142)</li>
+                                                                        <li>Education (#180)</li>
+                                                                        <li>Fine Arts (#177)</li>
+                                                                        <li>Nursing (#193)</li>
+                                                                        <li>Biological Sciences (#209)</li>
+                                                                        <li>Psychology (#117)</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 

@@ -1125,6 +1125,170 @@
     }
   }
 
+  &scorecard {
+    //.tooltip { position: absolute; z-index: 1070; display: block; visibility: visible; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: normal; line-height: 1.4; opacity: 0; filter: alpha(opacity=0); }
+    //.tooltip.in { opacity: 0.9; filter: alpha(opacity=90); }
+    //.tooltip.top { margin-top: -3px; padding: 5px 0; }
+    //.tooltip.right { margin-left: 3px; padding: 0 5px; }
+    //.tooltip.bottom { margin-top: 3px; padding: 5px 0; }
+    //.tooltip.left { margin-left: -3px; padding: 0 5px; }
+    //
+    //.tooltip-inner { max-width: 200px; padding: 3px 8px; color: #fff; text-align: center; text-decoration: none; background-color: #000; border-radius: 4px; }
+    //
+    //.tooltip-arrow { position: absolute; width: 0; height: 0; border-color: transparent; border-style: solid; }
+    //
+    //.tooltip.top .tooltip-arrow { bottom: 0; left: 50%; margin-left: -5px; border-width: 5px 5px 0; border-top-color: #000; }
+    //.tooltip.top-left .tooltip-arrow { bottom: 0; right: 5px; margin-bottom: -5px; border-width: 5px 5px 0; border-top-color: #000; }
+    //.tooltip.top-right .tooltip-arrow { bottom: 0; left: 5px; margin-bottom: -5px; border-width: 5px 5px 0; border-top-color: #000; }
+    //.tooltip.right .tooltip-arrow { top: 50%; left: 0; margin-top: -5px; border-width: 5px 5px 5px 0; border-right-color: #000; }
+    //.tooltip.left .tooltip-arrow { top: 50%; right: 0; margin-top: -5px; border-width: 5px 0 5px 5px; border-left-color: #000; }
+    //.tooltip.bottom .tooltip-arrow { top: 0; left: 50%; margin-left: -5px; border-width: 0 5px 5px; border-bottom-color: #000; }
+    //.tooltip.bottom-left .tooltip-arrow { top: 0; right: 5px; margin-top: -5px; border-width: 0 5px 5px; border-bottom-color: #000; }
+    //.tooltip.bottom-right .tooltip-arrow { top: 0; left: 5px; margin-top: -5px; border-width: 0 5px 5px; border-bottom-color: #000; }
+
+    .tooltip {
+      @extend .font--lato;
+
+      &.in {
+        opacity: 1;
+        filter: alpha(opacity=100);
+      }
+
+      &- {
+        &inner {
+          padding: 10px 8px;
+          background-color: #F7F7F7;
+          border: 1px solid #E0E0E0;
+          border-radius: 3px;
+          color: #676767;
+        }
+
+        &arrow {
+          &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+          }
+        }
+      }
+
+      &.top .tooltip-arrow {
+        bottom: 1px;
+        border-top-color: #F7F7F7;
+
+        &:before {
+          bottom: -1px;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px 5px 0;
+          border-top-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+
+      &.top-left .tooltip-arrow {
+        bottom: 1px;
+        border-top-color: #F7F7F7;
+
+        &:before {
+          bottom: -1px;
+          right: 5px;
+          margin-bottom: -5px;
+          border-width: 5px 5px 0;
+          border-top-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+
+      &.top-right .tooltip-arrow {
+        bottom: 1px;
+        border-top-color: #F7F7F7;
+
+        &:before {
+          bottom: -1px;
+          left: 5px;
+          margin-bottom: -5px;
+          border-width: 5px 5px 0;
+          border-top-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+
+      &.right .tooltip-arrow {
+        left: 1px;
+        border-right-color: #F7F7F7;
+
+        &:before {
+          top: 50%;
+          left: -1px;
+          margin-top: -5px;
+          border-width: 5px 5px 5px 0;
+          border-right-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+
+      &.left .tooltip-arrow {
+        right: 1px;
+        border-left-color: #F7F7F7;
+
+        &:before {
+          top: 50%;
+          right: -1px;
+          margin-top: -5px;
+          border-width: 5px 0 5px 5px;
+          border-left-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+
+      &.bottom .tooltip-arrow {
+        top: 1px;
+        border-bottom-color: #F7F7F7;
+
+        &:before {
+          top: -1px;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 0 5px 5px;
+          border-bottom-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+
+      &.bottom-left .tooltip-arrow {
+        top: 1px;
+        border-bottom-color: #F7F7F7;
+
+        &:before {
+          top: -1px;
+          right: 5px;
+          margin-top: -5px;
+          border-width: 0 5px 5px;
+          border-bottom-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+
+      &.bottom-right .tooltip-arrow {
+        top: 1px;
+        border-bottom-color: #F7F7F7;
+
+        &:before {
+          top: -1px;
+          left: 5px;
+          margin-top: -5px;
+          border-width: 0 5px 5px;
+          border-bottom-color: #E0E0E0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
   @media (max-width: $screen-xs-max) {
     &microsite {
       &-subpage {
@@ -2576,6 +2740,431 @@ $home--programs-width: 380px;
           top: 4px;
           left: 6px;
           font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.scorecard {
+  &-- {
+    &button {
+      position: relative;
+      display: inline-block;
+      min-width: 122px;
+      margin: 5px 10px;
+      padding: 6px 30px;
+      background-color: $color--white;
+      border: 1px solid #A0A0A0;
+      color: $color--graydark;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      @include transition(all 0.3s ease);
+
+      &:focus,
+      &:hover,
+      &__selected {
+        background-color: $color--blue;
+        border-color: #9C9C9C;
+        color: $color--white;
+      }
+
+      &__ {
+        &info {
+          display: none;
+
+          &__ {
+            &wrap {
+              float: left;
+              width: 352px;
+              max-width: 352px;
+              height: 305px;
+              max-height: 305px;
+              margin: auto 0;
+              font-size: 14px;
+              font-weight: 400;
+              text-align: left;
+              cursor: auto;
+              z-index: 99;
+            }
+
+            &title,
+            &lists,
+            &lists ul,
+            &lists ul li {
+              float: left;
+              width: 100%;
+            }
+
+            &title {
+              position: relative;
+              padding: 9px 35px 9px percentage(20px/352px);
+              background-color: #535353;
+              @include border-top-radius(3px);
+              color: $color--white;
+              font-weight: 700;
+              letter-spacing: 0.100em;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+
+            &lists {
+              padding: 5px 0 10px;
+              background-color: #F7F7F7;
+              border: 1px solid #E0E0E0;
+              @include border-bottom-radius(3px);
+              line-height: 16px;
+
+              &,
+              a {
+                color: #676767;
+              }
+
+              ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                max-height: 270px;
+                overflow: auto;
+
+                li {
+                  padding: 4px percentage(20px/352px);
+                }
+              }
+            }
+          }
+        }
+
+        &close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: #B3B3B3;
+          font-size: 18px;
+          cursor: pointer;
+        }
+
+        &selected {
+
+        }
+      }
+
+      .scorecard--button__info {
+        &__ {
+          &wrap {
+            position: absolute;
+            left: 130%;
+            top: 0;
+            bottom: 0;
+
+            &:before,
+            &:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              width: 0;
+              height: 0;
+              margin: auto;
+              border-top: 44px solid transparent;
+              border-bottom: 44px solid transparent;
+              border-right: 46px solid transparent;
+              -moz-transform: scale(0.9999);
+            }
+
+            &:before {
+              left: -46px;
+              border-right-color: #E0E0E0;
+            }
+
+            &:after {
+              left: -44px;
+              border-right-color: #F7F7F7;
+            }
+          }
+        }
+      }
+    }
+
+    &row {
+    }
+
+    &tip {
+      position: relative;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-color: #F3F3F3;
+      border: 1px solid #DBDBDB;
+      @include border-radius(50%);
+      color: #747474;
+      font-size: 15px;
+      font-weight: 900;
+      line-height: normal;
+      text-align: center;
+      cursor: pointer;
+
+      &:before {
+        content: "?";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    &box {
+      $scorecard-box-width: 568px;
+      $scorecard-box-width-margin: 20px;
+      float: left;
+      width: 100%;
+      margin-bottom: 60px;
+
+      &__ {
+        &close {
+          position: relative;
+          top: 0;
+          float: left;
+          padding-right: 15px;
+          color: $color--blue;
+          font-size: 24px !important;
+          cursor: pointer;
+
+          &.fa-flip-vertical {
+            top: 3px;
+          }
+        }
+
+        &title,
+        &interior {
+          float: left;
+          width: 100%;
+          padding: 0 percentage($scorecard-box-width-margin/$scorecard-box-width);
+          border: 1px solid #E0E0E0;
+        }
+
+        &title {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          background-color: #F3F3F3;
+
+          h2 {
+            margin: 0;
+            font-size: 20px;
+            letter-spacing: 0.100em;
+            line-height: normal;
+          }
+
+          & + .scorecard--box__interior {
+            border-top: 0;
+          }
+        }
+
+        &interior {
+          padding-top: 10px;
+          padding-bottom: 20px;
+          font-size: 18px;
+
+          &__ {
+            &top {
+              margin-bottom: 20px;
+            }
+            &row {
+              padding: (38px/2) 0;
+
+              &__ {
+                &title {
+                  display: block;
+                  margin-top: 10px;
+                }
+              }
+            }
+
+            &title {
+              margin-top: 15px;
+              color: $color--blue;
+              font-size: 20px;
+              font-weight: 700;
+            }
+
+            &ranking {
+              font-size: 14px;
+              text-align: center;
+
+              &__ {
+                &title {
+                  display: block;
+                  margin-bottom: 10px;
+                  font-size: 20px;
+                  font-weight: 900;
+                }
+              }
+            }
+          }
+        }
+
+        &number {
+          color: $color--blue;
+          font-size: 24px;
+          font-weight: 900;
+        }
+
+        &pie {
+          position: relative;
+          width: 50px;
+          height: 50px;
+          margin: auto;
+          background-color: #F3F3F3;
+          border: 1px solid #DBDBDB;
+
+          &,
+          &:before {
+            @include border-radius(50%);
+          }
+
+          &:before {
+            content: "";
+            display: block;
+            position: relative;
+            $position: ((50px - 40px - 2px) / 2);
+            top: $position;
+            left: $position;
+            width: 40px;
+            height: 40px;
+            background-color: #E4E4E4;
+          }
+
+          &__ {
+            &top {
+              &:before {
+                background-color: #A3D063;
+              }
+            }
+
+            &middle {
+              &:before {
+                background-color: #F2B92C;
+                background-image:
+                  linear-gradient(136deg, transparent 50%, #F2B92C 50%),
+                  linear-gradient(90deg, white 50%, transparent 50%);
+              }
+            }
+
+            &bottom {
+              &:before {
+                background-color: #F1573A;
+                background-image:
+                  linear-gradient(226deg, transparent 50%, white 50%),
+                  linear-gradient(90deg, white 50%, transparent 50%);
+              }
+            }
+          }
+        }
+
+        &stands {
+          .scorecard--box__title {
+            background-color: #FAF9F9;
+            padding-top: 23px;
+            padding-bottom: 23px;
+            text-align: center;
+
+            h2 {
+              font-size: 18px;
+            }
+          }
+
+          .scorecard--box__interior {
+            padding-top: 24px;
+          }
+
+          .scorecard--box__interior__row {
+            padding: 6px 0;
+          }
+
+          .scorecard--box__interior__title {
+            margin: 0;
+            color: $color--graydark;
+            font-size: 18px;
+            letter-spacing: 0.100em;
+            line-height: normal;
+            text-align: center;
+            text-transform: uppercase;
+
+            span {
+              display: block;
+              font-size: 14px;
+              letter-spacing: normal;
+              text-transform: none;
+            }
+          }
+        }
+      }
+    }
+
+    &lists {
+      &__ {
+        &star {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          font-size: 21px;
+
+          li {
+            margin: 1em;
+            margin-left: 3em;
+
+            &:before {
+              content: '\f005';
+              float: left;
+              margin-left: -2em;
+              color: $color--blue;
+              font-family: 'FontAwesome';
+              font-size: 24px;
+            }
+          }
+        }
+
+        &rankings {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          font-size: 21px;
+
+          li {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fancybox {
+  &- {
+    &inner {
+      .scorecard {
+        &-- {
+          &button {
+            &__ {
+              &info {
+                &__ {
+                  &wrap {
+                    width: 100%;
+                    height: auto;
+                    max-height: none;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -124,6 +124,9 @@
         }
       }
     }
+
+    &scorecard {
+    }
   }
 
   .icon {
@@ -695,6 +698,41 @@
         > li {
           width: 100%;
           margin: 0;
+        }
+      }
+    }
+  }
+
+  .scorecard {
+    &-- {
+      &button {
+        &__ {
+          &info {
+            float: left;
+
+            &__ {
+              &wrap {
+              }
+            }
+          }
+        }
+      }
+
+      &box {
+        &__ {
+          &number {
+            font-size: 30px;
+          }
+        }
+      }
+
+      &lists {
+        &__ {
+          &star {
+            li {
+              margin-left: 4em;
+            }
+          }
         }
       }
     }

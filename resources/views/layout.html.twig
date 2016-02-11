@@ -39,6 +39,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="{{ app.request.basepath }}/js/plugins.js"></script>
+{% block scripts %}{% endblock %}
     <script src="{{ app.request.basepath }}/js/main.js"></script>
 
 </head>
@@ -176,6 +177,7 @@
                         </div>
                     </div>
 
+                    {% if (header_resources is not defined or header_resources != 'no') %}
                     <div class="row">
                         <div id="header--box" class="header--box col-md-24 col-xs-hidden col-md-show">
                             <div class="header--box__wrapper">
@@ -526,6 +528,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endif %}
 
                 </div>
             </div>
@@ -744,8 +747,6 @@
 
         <a href="">Email Preferences <i class="fa fa-angle-right"></i></a>
     </div>
-
-{% block scripts %}{% endblock %}
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!-- <script>

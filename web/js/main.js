@@ -136,6 +136,70 @@ $(document).ready(function() {
         return false;
     };
 
+    var scorecardButtonFunc = function(that, e) {
+        var $that = $(that),
+            $thatInfo = $('.scorecard--button__info', $that);
+
+        if ($thatInfo.css("float") == "left" ) {
+            if ($(e.target).is('.scorecard--button, .scorecard--button span')) {
+                if ($thatInfo.hasClass(show)) {
+                    $thatInfo.removeClass(show).hide();
+                    $that.removeClass('scorecard--button__selected');
+                } else {
+                    $('.scorecard--button').each(function() {
+                        var $eachThat = $(this),
+                            $eachThatInfo = $('.scorecard--button__info', $eachThat);
+
+                        if ($eachThatInfo.hasClass(show)) {
+                            $eachThatInfo.removeClass(show).hide();
+                            $eachThat.removeClass('scorecard--button__selected');
+                        }
+                    });
+                    $thatInfo.addClass(show).show();
+                    $that.addClass('scorecard--button__selected');
+                }
+            }
+        } else {
+            var thatInfoId = $thatInfo.attr('id');
+
+            if (thatInfoId !== '') {
+                $.fancybox.open({
+                    href: '#' + thatInfoId,
+                    autoDimensions: false,
+                    autoScale: false,
+                    closeBtn: false,
+                    closeClick: false,
+                    height: 'auto',
+                    helpers: {
+                        overlay: {
+                            closeClick: false,
+                            css: {'overflow': 'hidden'}
+                        }
+                    },
+                    padding: 0,
+                    scrolling: 'no',
+                    width: 'auto',
+                });
+
+                $that.addClass('scorecard--button__selected');
+            }
+        }
+    };
+
+    var scorecardButtonCloseFunc = function(that) {
+        var $that = $(that),
+            $thatInfo = $that.closest('.scorecard--button__info'),
+            $thatButton = $that.closest('.scorecard--button');
+
+        if ($.fancybox.isOpen) {
+            $.fancybox.close();
+            $('.scorecard--button__selected').removeClass('scorecard--button__selected');
+        } else {
+            $thatInfo.removeClass(show).hide();
+            $thatButton.removeClass('scorecard--button__selected');
+        }
+    };
+
     $('.popup').fancybox(fancybox_option);
 
     $('a[href*=#]:not([href=#])').click(function() {
@@ -502,6 +566,54 @@ $(document).ready(function() {
             $footer_lists.removeClass('col-xs-'+hidden);
         }
     });
+
+    if ($('div').hasClass('type--scorecard')) {
+        $('[data-toggle="tooltip"]').tooltip()
+
+        var $scorecardBox = $('.scorecard--box'),
+            $scorecardBoxClose = $('.scorecard--box__close', $scorecardBox),
+            $scorecardButton = $('.scorecard--button'),
+            $scorecardButtonInfo = $('.scorecard--button__info', $scorecardButton),
+            $scorecardButtonClose = $('.scorecard--button__close', $scorecardButton)/*,
+            scorecardButtonTimer,
+            scorecardButtonDelay = 3000*/;
+
+        //$scorecardButtonInfo.fancybox();
+
+        $scorecardBoxClose.on('click', function(e) {
+            e.preventDefault();
+
+            var $that = $(this),
+                $thatBox = $that.closest('.scorecard--box').find('.scorecard--box__interior');
+
+            if ($that.hasClass(class_vertical)) {
+                $that.removeClass(class_vertical);
+                $thatBox.removeClass(hidden);
+            } else {
+                $that.addClass(class_vertical);
+                $thatBox.addClass(hidden);
+            }
+        });
+
+        $scorecardButton.on('click', function(e) {
+            e.preventDefault();
+            scorecardButtonFunc(this, e);
+        });
+
+        /*$scorecardButton.hover(function(e) {
+            var that = this;
+            scorecardButtonTimer = setTimeout(function() {
+                scorecardButtonFunc(that, e);
+            }, scorecardButtonDelay);
+        }, function() {
+            clearTimeout(scorecardButtonTimer);
+        });*/
+
+        $scorecardButtonClose.on('click', function(e) {
+            e.preventDefault();
+            scorecardButtonCloseFunc(this);
+        });
+    }
 });
 
 $(window).load(function() {
