@@ -1934,6 +1934,7 @@ ul.select-style2-selectBox-dropdown-menu a { background: none; color: #231F20; p
 
 .scorecard--button { position: relative; display: inline-block; min-width: 122px; margin: 5px 10px; padding: 6px 30px; background-color: #FFFFFF; border: 1px solid #A0A0A0; color: #4C4C4C; font-size: 16px; font-weight: 700; line-height: 24px; text-align: center; cursor: pointer; outline: none; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
 .scorecard--button:focus, .scorecard--button:hover, .scorecard--button__selected { background-color: #004891; border-color: #9C9C9C; color: #FFFFFF; }
+.scorecard--button__group { display: block; }
 .scorecard--button__info { display: none; }
 .scorecard--button__info__wrap { float: left; width: 352px; max-width: 352px; height: 305px; max-height: 305px; margin: auto 0; font-size: 14px; font-weight: 400; text-align: left; cursor: auto; z-index: 99; }
 .scorecard--button__info__title, .scorecard--button__info__lists, .scorecard--button__info__lists ul, .scorecard--button__info__lists ul li { float: left; width: 100%; }
@@ -2086,7 +2087,8 @@ footer { border-top: 1px solid #C4C5C2; }
   .footer--top__img__push { border-right: 1px solid #FFFFFF; }
   .footer--socialmedia h4 { text-align: center; }
   .footer--full__sitemap { margin-bottom: 90px; font-size: 28px; }
-  .footer--lists { text-align: left; } }
+  .footer--lists { text-align: left; }
+  .scorecard--button__group { display: inline; } }
 @media (min-width: 992px) { .col-md-hidden { display: none !important; }
   .col-md-show { display: block !important; }
   h1, .h1 { font-size: 36px; }

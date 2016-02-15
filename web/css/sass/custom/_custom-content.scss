@@ -2774,6 +2774,9 @@ $home--programs-width: 380px;
       }
 
       &__ {
+        &group {
+          display: block;
+        }
         &info {
           display: none;
 
