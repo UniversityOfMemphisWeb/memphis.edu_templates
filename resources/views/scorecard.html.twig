@@ -1,6 +1,5 @@
 {% extends 'layout.html.twig' %}
 {% set active = ['type--scorecard', 'type--page'] %}
-{% set header_resources = 'no' %}
 {% block title %}Scorecard - {% endblock %}
 {% block scripts %}
     <script src="{{ app.request.basepath }}/js/vendor/bootstrap/javascripts/bootstrap/tooltip.js"></script>
@@ -77,7 +76,7 @@
 
                             <div class="row">
                                 <div class="col-xs-24 col-md-13">
-                                    <p>The scorecard rates UofM in comparison to <a class="font--bold" href="#">14 peer institutions</a> nationally and to the eight sister Tennessee public, four-year universities on student performance and financial data. In each category, UofM is ranked in the top, middle or bottom third according to the color code in the key at right.</p>
+                                    <p>The scorecard rates UofM in comparison to <a class="font--bold" href="#">19 peer institutions</a> nationally and to the eight sister Tennessee public, four-year universities on student performance and financial data. In each category, UofM is ranked in the top, middle or bottom third according to the color code in the key at right.</p>
 
                                     <div style="margin-bottom: 24px;">
                                         The comparison institutions:
@@ -93,16 +92,6 @@
 
                                                         <div class="scorecard--button__info__lists">
                                                             <ul>
-                                                                <li><a href="">Cleveland State University</a></li>
-                                                                <li>CUNY City College</li>
-                                                                <li>Florida Agricultural and Mechanical University</li>
-                                                                <li>Georgia State University</li>
-                                                                <li>Indiana University-Purdue University-Indianapolis</li>
-                                                                <li>Portland State University</li>
-                                                                <li>Temple University</li>
-                                                                <li>University of Alabama at Birmingham</li>
-                                                                <li>University of Cincinnati-Main Campus</li>
-                                                                <li>University of Illinois at Chicago</li>
                                                                 <li>Cleveland State University</li>
                                                                 <li>CUNY City College</li>
                                                                 <li>Florida Agricultural and Mechanical University</li>
@@ -113,6 +102,15 @@
                                                                 <li>University of Alabama at Birmingham</li>
                                                                 <li>University of Cincinnati-Main Campus</li>
                                                                 <li>University of Illinois at Chicago</li>
+                                                                <li>University of Massachusetts-Boston</li>
+                                                                <li>University of Missouri-Kansas City</li>
+                                                                <li>University of Missouri-St Louis</li>
+                                                                <li>University of New Orleans</li>
+                                                                <li>University of Pittsburgh-Pittsburgh Campus</li>
+                                                                <li>University of Toledo</li>
+                                                                <li>University of Wisconsin-Milwaukee</li>
+                                                                <li>Virginia Commonwealth University</li>
+                                                                <li>Wayne State University</li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -139,16 +137,6 @@
                                                                 <li>University of Alabama at Birmingham</li>
                                                                 <li>University of Cincinnati-Main Campus</li>
                                                                 <li>University of Illinois at Chicago</li>
-                                                                <li>Cleveland State University</li>
-                                                                <li>CUNY City College</li>
-                                                                <li>Florida Agricultural and Mechanical University</li>
-                                                                <li>Georgia State University</li>
-                                                                <li>Indiana University-Purdue University-Indianapolis</li>
-                                                                <li>Portland State University</li>
-                                                                <li>Temple University</li>
-                                                                <li>University of Alabama at Birmingham</li>
-                                                                <li>University of Cincinnati-Main Campus</li>
-                                                                <li>University of Illinois at Chicago</li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -160,7 +148,7 @@
                                     <p>
                                         <em>
                                             Source, unless otherwise noted:<br>
-                                            <a href="#">National Center for Education Statistics.</a>
+                                            <a href="https://nces.ed.gov/">National Center for Education Statistics.</a>
                                         </em>
                                     </p>
                                 </div>
@@ -250,7 +238,7 @@
                                                             Enrollment:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            21,059 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text! Some tooltip text!"></span>
+                                                            21,059 <span class="scorecard--tip" data-toggle="tooltip" title="Total Undergraduate, Graduate, and Professional students enrolled for credit in the Fall of the academic year. Source: IPEDS 2014 Fall Enrollment Component"></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -273,7 +261,7 @@
                                                             Non-Traditional Enrollment:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            26% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            26% <span class="scorecard--tip" data-toggle="tooltip" title="Percent of all undergraduates who are age 25 or older. Source: IPEDS Completions Component, 2013-14."></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -296,7 +284,7 @@
                                                             Percent Admitted:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            47% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            47% <span class="scorecard--tip" data-toggle="tooltip" title="Percent of all applicants who are admitted to the institution. Source: IPEDS Fall 2014 Institutional Characteristics. "></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -319,7 +307,7 @@
                                                             Admissions Yield:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            44% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            44% <span class="scorecard--tip" data-toggle="tooltip" title="The percent of admitted undergraduate students who enroll. Source: IPEDS Fall 2014 Institutional Characteristics."></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -371,7 +359,7 @@
                                                             Total Degrees Awarded
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            4,412 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            4,412 <span class="scorecard--tip" data-toggle="tooltip" title="Source: IPEDS Completions Component, 2013-14."></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -394,7 +382,7 @@
                                                             Bachelor’s Degrees Awarded:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            2,991 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            2,991 <span class="scorecard--tip" data-toggle="tooltip" title="Source: IPEDS Completions Component, 2013-14."></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -417,7 +405,7 @@
                                                             Master’s Degrees Awarded:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            1,060 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            1,060 <span class="scorecard--tip" data-toggle="tooltip" title="Source: IPEDS Completions Component, 2013-14."></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -440,7 +428,7 @@
                                                             Doctoral /Professional Degrees Awarded:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            260 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            260 <span class="scorecard--tip" data-toggle="tooltip" title="Source: IPEDS Completions Component, 2013-14."></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -464,7 +452,7 @@
                                                                                                         Cert. Awarded:
                                                         </div>
                                                         <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                            101 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                            101 <span class="scorecard--tip" data-toggle="tooltip" title="Source: IPEDS Completions Component, 2013-14."></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -520,7 +508,7 @@
                                                                     Percentage of First Time Undergraduates Receiving Financial Aid:
                                                                 </div>
                                                                 <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                                    97% <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                                    97% <span class="scorecard--tip" data-toggle="tooltip" title="Percentage of all full-time, first-time degree / certificate-seeking undergraduate students who received any financial aid. Source: IPEDS 2013-14 Student Financial Aid Component."></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -564,7 +552,7 @@
                                                                     Published In-District Tuition and Fees:
                                                                 </div>
                                                                 <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                                    $8,619 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                                    $8,619 <span class="scorecard--tip" data-toggle="tooltip" title="Yearly tuition and fees charged to in-state students. Source: IPEDS Fall 2014 Instituitonal Characteristics."></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -586,7 +574,7 @@
                                                                     Endowment Assets per FTE Enrollment:
                                                                 </div>
                                                                 <div class="col-xs-24 col-sm-8 col-md-11 scorecard--box__number">
-                                                                    $11,811 <span class="scorecard--tip" data-toggle="tooltip" title="Some tooltip text!"></span>
+                                                                    $11,811 <span class="scorecard--tip" data-toggle="tooltip" title="Year end endownment assets per 12-month FTE enrollment. Source: IPEDS Spring 2014 Finance Component."></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -648,16 +636,6 @@
 
                                                                 <div class="scorecard--button__info__lists">
                                                                     <ul>
-                                                                        <li>Clinical Psychology (#79)</li>
-                                                                        <li>Public Affairs (#104)</li>
-                                                                        <li>Online MBA (#66)</li>
-                                                                        <li>Math (#126)</li>
-                                                                        <li>Law (#142)</li>
-                                                                        <li>Education (#180)</li>
-                                                                        <li>Fine Arts (#177)</li>
-                                                                        <li>Nursing (#193)</li>
-                                                                        <li>Biological Sciences (#209)</li>
-                                                                        <li>Psychology (#117)</li>
                                                                         <li>Clinical Psychology (#79)</li>
                                                                         <li>Public Affairs (#104)</li>
                                                                         <li>Online MBA (#66)</li>
