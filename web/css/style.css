@@ -1401,7 +1401,7 @@ header nav > ul > li:focus > a, header nav > ul > li:hover > a, header nav > ul 
 .header--search input[type="search"]:-ms-input-placeholder { color: #F8FBFE; }
 .header--search input[type="search"]::-webkit-input-placeholder { color: #F8FBFE; }
 .header--box { position: absolute; bottom: 0; float: left; max-height: 44px; height: 44px; line-height: 44px; }
-.header--box__wrapper { position: absolute; z-index: 975; }
+.header--box__wrapper { position: absolute; z-index: 975; width: 100%; }
 .header--box__wrapper ul.header--box__text { padding: 0; }
 .header--box__text { float: left; padding: 0 24px; background-color: #044F9C; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 900; font-size: 14px; }
 .header--box__text:focus, .header--box__text:hover { color: #FFFFFF; }
