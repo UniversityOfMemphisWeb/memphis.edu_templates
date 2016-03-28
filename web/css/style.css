@@ -2013,7 +2013,7 @@ footer { border-top: 1px solid #C4C5C2; }
   .type--alumni__get-connected .box--transparent { margin-top: 0; }
   .type--alumni__join-membership { padding: 44px 0 20px; }
   .type--page .cover--title { margin-top: 167px; padding-top: 70px; }
-  .type--microsite__logo .cover { padding-bottom: 70px; }
+  .type--microsite__logo .cover { padding-bottom: 112px; }
   .type--microsite__logo .cover--title { padding-top: 93px; font-size: 36px; letter-spacing: 0.025em; }
   .icon-custom-tickets { width: 65px; height: 49px; background-size: 65px 49px; }
   header { top: 37px; height: 130px; }
@@ -2080,7 +2080,7 @@ footer { border-top: 1px solid #C4C5C2; }
   .home--quote__person__name { text-align: left; }
   .top--links { width: auto; margin-left: 0; }
   .top--links li { float: left; }
-  .content--logo { position: absolute; top: -214px; left: 0; }
+  .content--logo { position: absolute; top: -210px; left: 0; }
   .content--body { float: right; }
   .content--sidebar { margin-top: -105px; }
   .content--sidebar__wrap { background-color: #FFFFFF; }

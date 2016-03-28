@@ -35,11 +35,45 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ app.request.basepath }}/favicons/mstile-144x144.png">
     <meta name="theme-color" content="#00498f">
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="{{ app.request.basepath }}/js/plugins.js"></script>
+{% block scripts %}{% endblock %}
+    <script src="{{ app.request.basepath }}/js/main.js"></script>
+
 </head>
 <body>
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+{% if app.request.query.get('alert') is not null %}
+        <div class="header--alert" style="position: absolute; z-index: 999;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-16 col-md-offset-8">
+                        <div class="header--alert__wrapper">
+                            <div class="header--alert__wrapper__icon">
+                                <i class="fa fa-exclamation-circle"></i>
+                            </div>
+                            <div class="header--alert__wrapper__text">
+                                <span>University closed due to inclement weather</span>
+                                <a href="#" style="color: #{{ app.request.query.get('color') }} !important;">More <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery('header').css('top', '87px');
+                jQuery('div.type--home').css('margin-top', '69px');
+            });
+        </script>
+{% endif %}
 
     <header>
         <div class="header--bg__behind"></div>
@@ -143,29 +177,361 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-{% if app.request.query.get('alert') is not null %}
-        <div class="header--alert" style="background-color: #{{ app.request.query.get('bgColor') }}; color: #{{ app.request.query.get('color') }} !important;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-16 col-md-offset-8">
-                        <div class="header--alert__wrapper">
-                            <div class="header--alert__wrapper__icon">
-                                <i class="fa fa-exclamation-circle"></i>
+                    <div class="row">
+                        <div id="header--box" class="header--box col-md-24 col-xs-hidden col-md-show">
+                            <div class="header--box__wrapper">
+                                <a class="header--box__text header--box__click" href="">Resources for...</a>
+                                <ul id="header--box__list" class="no-style header--box__text visuallyhidden">
+                                    <li><a href="#prospective-students" data-box="prospective-students">Prospective Students</a></li>
+                                    <li><a href="#current-students" data-box="current-students">Current and Returning Students</a></li>
+                                    <li><a href="#parents" data-box="parents">Parents</a></li>
+                                    <li><a href="#alumni" data-box="alumni">Alumni</a></li>
+                                    <li><a href="#veterans" data-box="veterans">Veterans</a></li>
+                                </ul>
+                                <a id="header--box__arrow" class="header--box__arrow fa-angle-right header--box__click" href=""><span class="visuallyhidden">Expand Menu</span></a>
                             </div>
-                            <div class="header--alert__wrapper__text">
-                                <span>University closed due to inclement weather</span>
-                                <a href="#" style="color: #{{ app.request.query.get('color') }} !important;">More <i class="fa fa-chevron-right"></i></a>
+
+                            <div class="header--box__mega">
+                                <div data-box-mega="prospective-students" class="header--mega col-xs-hidden">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Learn About the Admissions Process <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Schedule a Visit <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Prospective Student Guide <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Scholarships and Financial Aid <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-md-offset-1">
+                                            <div class="header--mega__block header--mega__news">
+                                                <h4><a class="box--link" href="#">Undergraduate Applications <i class="fa fa-angle-right"></i></a></h4>
+                                                <div class="text--deadline">Fall Deadline: Dec 31</div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block header--mega__news">
+                                                <h4><a class="box--link" href="#">Graduate Applications <i class="fa fa-angle-right"></i></a></h4>
+                                                <div class="text--deadline">Fall Deadline: Dec 31</div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block header--mega__news">
+                                                <h4><a class="box--link" href="#">Law Applications <i class="fa fa-angle-right"></i></a></h4>
+                                                <div class="text--deadline">Fall Deadline: Dec 31</div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block header--mega__news">
+                                                <h4><a class="box--link" href="#">International Applications <i class="fa fa-angle-right"></i></a></h4>
+                                                <div class="text--deadline">Fall Deadline: Dec 31</div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-7">
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__colleges-and-schools.jpg" alt="Colleges and Schools"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__colleges-and-schools.jpg" alt="Colleges and Schools"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__campus-life.jpg" alt="Campus Life"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__campus-life.jpg" alt="Campus Life"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="home--quote__info">
+                                                <p>&ldquo;Quote from student about school Quote experience Quote from student about school experience&rdquo;</p>
+                                                <a href="#" class="font--bold">READ MORE <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="home--quote__person__image">
+                                                <img class="lazy" data-original="{{ app.request.basepath }}/img/circle-student.png" alt="Photo of Student"/>
+                                                <noscript><img src="{{ app.request.basepath }}/img/circle-student.png" alt="Photo of Student"/></noscript>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-box-mega="current-students" class="header--mega col-xs-hidden">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Registration <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Student Services <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Student Organizations <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Majors and Minors <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-md-offset-1">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Course Schedule <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Academic Calendars <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Academic Support Services <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Lambuth Campus <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-7">
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__campus-map.jpg" alt="Campus Map"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__campus-map.jpg" alt="Campus Map"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__tiger-dining.jpg" alt="Tiger Dining"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__tiger-dining.jpg" alt="Tiger Dining"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="home--quote__info">
+                                                <p>&ldquo;Quote from student about school Quote experience Quote from student about school experience&rdquo;</p>
+                                                <a href="#" class="font--bold">READ MORE <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="home--quote__person__image">
+                                                <img class="lazy" data-original="{{ app.request.basepath }}/img/circle-student.png" alt="Photo of Student"/>
+                                                <noscript><img src="{{ app.request.basepath }}/img/circle-student.png" alt="Photo of Student"/></noscript>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-box-mega="parents" class="header--mega col-xs-hidden">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">eNews and Signup <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Safety Information <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">FAQs <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Give to UofM <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-md-offset-1">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">News and Events <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Campus Map <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-7">
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__visit-campus.jpg" alt="Visit Campus"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__visit-campus.jpg" alt="Visit Campus"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__student-life.jpg" alt="Student Life"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__student-life.jpg" alt="Student Life"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="home--quote__info">
+                                                <p>&ldquo;Quote from student about school Quote experience Quote from student about school experience&rdquo;</p>
+                                                <a href="#" class="font--bold">READ MORE <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="home--quote__person__image">
+                                                <img class="lazy" data-original="{{ app.request.basepath }}/img/circle-student.png" alt="Photo of Student"/>
+                                                <noscript><img src="{{ app.request.basepath }}/img/circle-student.png" alt="Photo of Student"/></noscript>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-box-mega="alumni" class="header--mega col-xs-hidden">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Join Now <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Update Your Information <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Clubs and Chapters <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Make a Gift <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-md-offset-1">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Lambuth Chapter <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Upcoming Events <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Photo Gallery <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Alumni News <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-7">
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__join-now.jpg" alt="Join Now"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__join-now.jpg" alt="Join Now"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="header--mega__right-callout">
+                                                <a href="#">
+                                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/btn__update-your-information.jpg" alt="Update Your Information"/>
+                                                    <noscript><img src="{{ app.request.basepath }}/img/btn__update-your-information.jpg" alt="Update Your Information"/></noscript>
+                                                </a>
+                                            </div>
+
+                                            <div class="home--quote__info">
+                                                <p>&ldquo;Quote from alumni about staying connected via the alumi assosciation&rdquo;</p>
+                                                <a href="#" class="font--bold">READ MORE <i class="fa fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="home--quote__person__image">
+                                                <img class="lazy" data-original="{{ app.request.basepath }}/img/circle-alumni.png" alt="Photo of Alumni"/>
+                                                <noscript><img src="{{ app.request.basepath }}/img/circle-alumni.png" alt="Photo of Alumni"/></noscript>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-box-mega="veterans" class="header--mega col-xs-hidden">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Veterans Resource Center <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Benefits and Certifications <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Get Credits Toward your Degree <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+
+                                            <div class="header--mega__block">
+                                                <h4 class="h4--title"><a class="box--link" href="#">Online Degree Programs <i class="fa fa-angle-right"></i></a></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis erat quis leo lobortis vestibulum.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-15 col-md-offset-1">
+                                            <div class="header--mega__block">
+                                                <div class="header--mega__video">
+                                                    <div class="video--layout">
+                                                        <a href="#">
+                                                            <img class="lazy" data-original="{{ app.request.basepath }}/img/demo_video.jpg" alt="Photo of ..."/>
+                                                            <noscript><img src="{{ app.request.basepath }}/img/demo_video.jpg" alt="Photo of ..."/></noscript>
+                                                            <span class="video--layout__button-play"></span>
+                                                        </a>
+                                                        <div class="video--layout__bottom">
+                                                            <span class="video--layout__bottom__title">See his story:</span> Vietnam veteran Michael Sasseen completed his degree by earning Experiential Learning Credit (ELC) from his past experiences authoring a book and working with war veterans with PTSD.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-{% endif %}
 
     </header>
 
@@ -380,12 +746,6 @@
 
         <a href="">Email Preferences <i class="fa fa-angle-right"></i></a>
     </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="{{ app.request.basepath }}/js/plugins.js"></script>
-{% block scripts %}{% endblock %}
-    <script src="{{ app.request.basepath }}/js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!-- <script>
