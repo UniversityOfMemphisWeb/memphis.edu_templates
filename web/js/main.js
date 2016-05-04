@@ -471,11 +471,11 @@ $(document).ready(function() {
             $that_icon = $('i', $that),
             $that_list = $that.siblings('.nav--list');
 
-        if ($that_icon.hasClass('fa-angle-up')) {
-            $that_icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+        if ($that_icon.hasClass('fa-angle-right')) {
+            $that_icon.removeClass('fa-angle-right').addClass('fa-angle-down');
             $that_list.addClass('col-xs-show');
         } else {
-            $that_icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+            $that_icon.removeClass('fa-angle-down').addClass('fa-angle-right');
             $that_list.removeClass('col-xs-show');
         }
 
