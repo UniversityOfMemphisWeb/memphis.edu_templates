@@ -58,7 +58,7 @@ footer {
 
 .box--date,
 .wrap--home .col,
-.type--microsite-subpage-faculty tbody tr,
+.type--faculty tbody tr,
 .webdirectory--group ul > li > ul
 {
   margin-top: 10px;
@@ -102,16 +102,16 @@ h3,
 .h3,
 .content--body__wrapper,
 .faculty--box,
-.type--microsite-subpage-faculty .table,
-.type--microsite-subpage-faculty .table--caption,
-.type--microsite-subpage-faculty .table--wrapper,
+.type--faculty-single .table,
+.type--faculty-single .table--caption,
+.type--faculty-single .table--wrapper,
 .webdirectory--group
 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.type--microsite-subpage-faculty h3 {
+.type--faculty-single h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -140,7 +140,7 @@ h3,
 }
 
 .box--transparent a,
-.type--microsite-subpage-faculty .table--wrapper,
+.type--faculty-single .table--wrapper
 {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -153,7 +153,7 @@ ul.style,
   padding-left: 0;
 }
 
-.type--microsite-subpage-faculty .table--wrapper {
+.type--faculty-single .table--wrapper {
   padding-left: 0;
   padding-right: 0;
 }

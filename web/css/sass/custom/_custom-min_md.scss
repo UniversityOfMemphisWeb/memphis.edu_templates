@@ -595,17 +595,49 @@
 
     &--sidebar {
       margin-top: -105px;
-      //      position: absolute;
-      //      top: 0;
 
       &__wrap {
         background-color: $color--white;
-        //        position: relative;
-        //        top: -35px;
-        //        left: 0;
+      }
+    }
+
+    &--switch {
+      .content {
+        &-- {
+          &body {
+            float: left;
+          }
+
+          &sidebar {
+            //margin-top: 0;
+          }
+        }
       }
     }
   }
+
+  .faculty {
+      &-- {
+        &grids {
+          overflow: hidden;
+
+          &__ {
+            &wrapper {
+              margin-bottom: -80px;
+            }
+          }
+        }
+
+        &grid {
+          //padding: 65px 0;
+          padding: 20px 0 120px;
+
+          &:after {
+            bottom: 50px;
+          }
+        }
+      }
+    }
 
   .footer {
     &--top {

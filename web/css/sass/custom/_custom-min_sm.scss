@@ -147,11 +147,14 @@
 
     &microsite {
       &-subpage {
-        &-faculty {
-          td {
-            &:before {
-              content: '' !important;
-            }
+      }
+    }
+
+    &faculty {
+      &-single {
+        td {
+          &:before {
+            content: '' !important;
           }
         }
       }
@@ -295,11 +298,23 @@
 
   .faculty {
     &-- {
-      &info {
+      &grids {
+        overflow: hidden;
+
+        &__ {
+          &wrapper {
+            margin-bottom: -60px;
+          }
+        }
       }
 
-      &headshot {
-        float: right;
+      &grid {
+        //padding: 55px 0;
+        padding: 20px 0 100px;
+
+        &:after {
+          bottom: 40px;
+        }
       }
     }
   }

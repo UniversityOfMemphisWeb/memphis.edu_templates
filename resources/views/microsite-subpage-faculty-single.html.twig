@@ -1,0 +1,216 @@
+{% extends 'layout.html.twig' %}
+{% set active = ['type--page', 'type--faculty-single'] %}
+
+{% block title %}Faculty - Subpage - Microsite - {% endblock %}
+
+{% block cover %}
+
+        <div class="background cover">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="cover--title">
+
+                        <div class="cover--title__wrap">
+
+                            <div class="col-xs-24 col-md-17 col-md-offset-7">
+                                The Loewenberg School of Nursing
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="content">
+
+            <div class="content--top">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-18 col-md-offset-6">
+
+                            <ul class="top--links col-xs-hidden col-md-show">
+                                <li><a href="#" title="About">About</a></li>
+                                <li><a href="#" title="Programs">Programs</a></li>
+                                <li class="selected"><a href="#" title="Faculty">Faculty</a></li>
+                                <li><a href="#" title="Research">Research</a></li>
+                                <li><a href="#" title="Alumni">Alumni</a></li>
+                                <li><a href="#" title="Resources">Resources</a></li>
+                                <li><a href="#" title="News">News</a></li>
+                            </ul>
+
+                            <div id="nav--list__top" class="col-xs-show col-md-hidden">
+                                <div class="sidebar--box sidebar--box__border">
+                                    <div class="sidebar--box__title">Prospective Students <i class="fa fa-angle-right"></i></div>
+                                    <div class="nav--list">
+                                        <ul>
+                                            <li><a href="#">Dean's Message</a></li>
+                                            <li><a href="#">Dean's Advisory Council</a></li>
+                                            <li><a href="#">Mission, Vision, and Values</a></li>
+                                            <li class="has-subpage selected"><a href="#">Degree Programs</a>
+                                                <ul class="subpage">
+                                                    <li><a href="#">BSN</a></li>
+                                                    <li><a href="#">RN to BSN</a></li>
+                                                    <li><a href="#">RN to MSN</a></li>
+                                                    <li><a href="#">MSN Programs</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-subpage"><a href="#">Accreditation</a>
+                                                <ul class="subpage">
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">School Hisory</a></li>
+                                            <li class="has-subpage"><a href="#">Quick Facts</a>
+                                                <ul class="subpage">
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                    <li><a href="#">Menu Level 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row content--switch">
+
+                    <div class="content--sidebar col-xs-24 col-md-6">
+
+                        <div class="content--sidebar__wrap">
+
+                            <div class="faculty--headshot">
+                                <img class="lazy" data-original="{{ app.request.basepath }}/img/faculty.jpg" alt="Photo of faculty"/>
+                                <noscript><img src="{{ app.request.basepath }}/img/faculty.jpg" alt="Photo of faculty"/></noscript>
+                            </div>
+
+                            <h1>Faculty Member Name Member Name</h1>
+
+                            <h2>Title Title Title, Department Name Department</h2>
+
+                            <div class="sidebar--box sidebar--box__border col-xs-hidden col-md-show">
+                                <div class="sidebar--box__title">&nbsp;</div>
+                                <div class="nav--list">
+                                    <ul>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Research Lab</a></li>
+                                        <li><a href="#">Teaching</a></li>
+                                        <li><a href="#">Lab Updates</a></li>
+                                        <li><a href="#">Accolades</a></li>
+                                        <li><a href="#">Department Faculty</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="content--body col-xs-24 col-md-16 col-md-offset-1">
+
+                        <div class="breadcrumb col-xs-hidden col-md-show">
+                            <ul>
+                                <li><a href="{{ url('homepage') }}">Home</a></li>
+                                <li><a href="#">School of Nursing</a></li>
+                                <li><a href="{{ url('microsite-subpage-faculty') }}">Faculty</a></li>
+                                <li>Faculty Member Name</li>
+                            </ul>
+                        </div>
+
+                        <div class="content--body__wrapper">
+
+                            <div class="row">
+
+                                <div class="faculty--info col-xs-24">
+
+                                    <h3 class="first">Profile</h3>
+
+                                    <div class="faculty--box">
+                                        <div class="faculty--box__info">
+                                            <div class="faculty--box__info__title">Phone</div>
+                                            <div class="faculty--box__info__desc"><a href="tel:(901) 555-5555">(901) 555-5555</a></div>
+                                        </div>
+                                        <div class="faculty--box__info">
+                                            <div class="faculty--box__info__title">Email</div>
+                                            <div class="faculty--box__info__desc"><a href="mailto:First.Last@memphis.edu">First.Last@memphis.edu</a></div>
+                                        </div>
+                                        <div class="faculty--box__info">
+                                            <div class="faculty--box__info__title">Fax</div>
+                                            <div class="faculty--box__info__desc"><a href="tel:(901) 555-5555">(901) 555-5555</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="faculty--box">
+                                        <div class="faculty--box__info faculty--box__info__break">
+                                            <div class="faculty--box__info__title">Office Location</div>
+                                            <div class="faculty--box__info__desc">4625 Address, Building, Room #</div>
+                                        </div>
+                                        <div class="faculty--box__info faculty--box__info__break">
+                                            <div class="faculty--box__info__title">Office Hours</div>
+                                            <div class="faculty--box__info__desc">12-3 Mon-Thurs, 3-5 Fri</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h3>About Name of Staff Member</h3>
+
+                            <p>Professor Allen joined the Memphis law faculty in 2010. She teaches Torts I, Torts II, Health Law Organization and Finance, Health Law Survey, and a Health Law Seminar. Professor Allen was voted Professor of the Year in 2013. Her research interests includes health policy, pharmaceutical regulation, and medical malpractice. Professor Allen’s work was one of only four articles chosen for presentation at the American Society of Health Medicine and Ethics/ SLU Law Health Scholars workshop in 2012.</p>
+
+                            <h4>Education</h4>
+                            <p>J.D., Yale Law School, 2003; B.A., magna cum laude with honors in Psychology, Loyola University, 1999.</p>
+
+                            <h4>Admitted</h4>
+                            <p>State Bar of Texas, DC Bar.</p>
+
+                            <hr>
+
+                            <h3 class="uppercase">More About Professor</h3>
+
+                            <h4>Professional</h4>
+                            <p>Assistant Professor of Law, 2010-Present; Healthcare/FDA Associate, Arnold &amp; Porter LLP, 2007-2009; Law Clerk, The Honorable Paulette Delk, Federal Bankruptcy Judge, Memphis, TN, 2006-2007; Law Clerk, The Honorable Samuel H. Mays, Jr., Federal District Court Judge, Memphis, TN, 2005-2006; Employee Benefits Associate, Baker Botts LLP, Houston, TX, 2003-2005</p>
+
+                            <h4>Administrative</h4>
+                            <p>Summer Associate, Allen &amp; Overy, London, England, Summer 2002; Summer Associate, Vinson &amp; Elkins LLP, Houston, TX, Summer 2002; Summer Associate, Mayer, Brown, Rowe &amp; Maw, Houston, TX, Summer 2001; Student Clerk, Dept. of Justice, Executive Office for Immigration Review, New Orleans, LA, 1997-2000; Research Assistant, Department of Psychology, Dr. Kim Ernst, Loyola University, New Orleans, LA, 1999.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}

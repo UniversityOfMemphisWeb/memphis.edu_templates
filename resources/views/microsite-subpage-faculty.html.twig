@@ -1,7 +1,10 @@
 {% extends 'layout.html.twig' %}
-{% set active = ['type--microsite-subpage-faculty', 'type--page'] %}
+{% set active = ['type--page', 'type--faculty'] %}
 
 {% block title %}Faculty - Subpage - Microsite - {% endblock %}
+
+{% block scripts %}
+{% endblock %}
 
 {% block cover %}
 
@@ -111,166 +114,53 @@
                             <ul>
                                 <li><a href="{{ url('homepage') }}">Home</a></li>
                                 <li><a href="#">School of Nursing</a></li>
-                                <li><a href="#">Faculty</a></li>
-                                <li>Faculty Member Name</li>
+                                <li>Faculty</li>
                             </ul>
                         </div>
 
                         <div class="content--body__wrapper">
 
+                            <h1>Faculty</h1>
+
+                            <h2>Title of Faculty Division</h2>
+
                             <div class="row">
 
-                                <div class="faculty--headshot col-xs-24 col-sm-9">
-                                    <img class="lazy" data-original="{{ app.request.basepath }}/img/faculty.jpg" alt="Photo of faculty"/>
-                                    <noscript><img src="{{ app.request.basepath }}/img/faculty.jpg" alt="Photo of faculty"/></noscript>
-                                </div>
-
-                                <div class="faculty--info col-xs-24 col-sm-15">
-                                    <h1>Faculty Member Name Member Name</h1>
-
-                                    <h2>Title Title Title, Department Name Department</h2>
-
-                                    <div class="faculty--box">
-                                        <div class="faculty--box__info">
-                                            <div class="faculty--box__info__title">Phone</div>
-                                            <div class="faculty--box__info__desc">(901) 555-5555</div>
+                                <div class="faculty--grids col-xs-24">
+                                    <div class="faculty--grids__wrapper">
+                                        {% for i in 0..10 %}
+                                        <div class="faculty--grid match-height col-xs-24 col-sm-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-xs-19">
+                                                    <div class="faculty--headshot">
+                                                        <a href="{{ url('microsite-subpage-faculty-single') }}">
+                                                            <img class="lazy" data-original="{{ app.request.basepath }}/img/faculty.jpg" alt="Photo of faculty"/>
+                                                            <noscript><img src="{{ app.request.basepath }}/img/faculty.jpg" alt="Photo of faculty"/></noscript>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-22">
+                                                    <div class="faculty--box">
+                                                        <div class="faculty--box__title">Alena M. Allen</div>
+                                                        <div class="faculty--box__subtitle">Associate Professor of Law</div>
+                                                        <div class="faculty--box__info">
+                                                            <div class="faculty--box__info__title">Phone</div>
+                                                            <div class="faculty--box__info__desc"><a href="tel:(901) 555-5555">(901) 555-5555</a></div>
+                                                        </div>
+                                                        <div class="faculty--box__info">
+                                                            <div class="faculty--box__info__title">Email</div>
+                                                            <div class="faculty--box__info__desc"><a href="mailto:Namename@memphis.edu">Namename@memphis.edu</a></div>
+                                                        </div>
+                                                        <a class="faculty--box__link" href="{{ url('microsite-subpage-faculty-single') }}">View Profile</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="faculty--box__info">
-                                            <div class="faculty--box__info__title">Email</div>
-                                            <div class="faculty--box__info__desc">First.Last@memphis.edu</div>
-                                        </div>
-                                        <div class="faculty--box__info">
-                                            <div class="faculty--box__info__title">Fax</div>
-                                            <div class="faculty--box__info__desc">(901) 555-5555</div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
-
-                                    <div class="faculty--box">
-                                        <div class="faculty--box__info">
-                                            <div class="faculty--box__info__title">Office</div>
-                                            <div class="faculty--box__info__desc">Location 4625 Address, Building, Room #</div>
-                                        </div>
-                                        <div class="faculty--box__info">
-                                            <div class="faculty--box__info__title">Office Hours</div>
-                                            <div class="faculty--box__info__desc">12-3 Mon-Thurs, 3-5 Fri</div>
-                                        </div>
-                                    </div>
-
-                                    <ul class="no-style faculty--list">
-                                        <li><a href="#">Website</a></li>
-                                        <li><a href="#">CVS</a></li>
-                                        <li><a href="#">SSRN</a></li>
-                                    </ul>
                                 </div>
 
                             </div>
-
-                            <div class="table">
-                                <div class="table--caption">Spring 2015 Teaching Schedule</div>
-
-                                <div class="table--wrapper">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Class</th>
-                                                <th>Day</th>
-                                                <th>Time</th>
-                                                <th>Location</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Class">Math 7/8029-001</td>
-                                                <td data-label="Day">TR</td>
-                                                <td data-label="Time">11:20am-12:45pm</td>
-                                                <td data-label="Location">DH 245</td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Class">Math 7/8029-001</td>
-                                                <td data-label="Day">TR</td>
-                                                <td data-label="Time">11:20am-12:45pm</td>
-                                                <td data-label="Location">DH 245</td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Class">Math 7/8029-001</td>
-                                                <td data-label="Day">TR</td>
-                                                <td data-label="Time">11:20am-12:45pm</td>
-                                                <td data-label="Location">DH 245</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <h3>About Name of Staff Member</h3>
-
-                            <p>Professor Allen joined the Memphis law faculty in 2010. She teaches Torts I, Torts II, Health Law Organization and Finance, Health Law Survey, and a Health Law Seminar. Professor Allen was voted Professor of the Year in 2013. Her research interests includes health policy, pharmaceutical regulation, and medical malpractice. Professor Allen’s work was one of only four articles chosen for presentation at the American Society of Health Medicine and Ethics/ SLU Law Health Scholars workshop in 2012.</p>
-
-                            <h4>Education</h4>
-                            <p>J.D., Yale Law School, 2003; B.A., magna cum laude with honors in Psychology, Loyola University, 1999.</p>
-
-                            <h4>Admitted</h4>
-                            <p>State Bar of Texas, DC Bar.</p>
-
-                            <h3>Experience</h3>
-
-                            <h4>Professional</h4>
-                            <p>Assistant Professor of Law, 2010-Present; Healthcare/FDA Associate, Arnold &amp; Porter LLP, 2007-2009; Law Clerk, The Honorable Paulette Delk, Federal Bankruptcy Judge, Memphis, TN, 2006-2007; Law Clerk, The Honorable Samuel H. Mays, Jr., Federal District Court Judge, Memphis, TN, 2005-2006; Employee Benefits Associate, Baker Botts LLP, Houston, TX, 2003-2005</p>
-
-                            <h4>Administrative</h4>
-                            <p>Summer Associate, Allen &amp; Overy, London, England, Summer 2002; Summer Associate, Vinson &amp; Elkins LLP, Houston, TX, Summer 2002; Summer Associate, Mayer, Brown, Rowe &amp; Maw, Houston, TX, Summer 2001; Student Clerk, Dept. of Justice, Executive Office for Immigration Review, New Orleans, LA, 1997-2000; Research Assistant, Department of Psychology, Dr. Kim Ernst, Loyola University, New Orleans, LA, 1999.</p>
-
-                            <h3>Honors and Awards</h3>
-
-                            <p>Tennessee Art Education Association Special Needs Art Educator of the Year, 2013<br>
-                                Nominated for the Thomas W. Briggs Foundation Excellence in Teaching Award. 2013<br>
-                                Honorable Mention in TAEA Juried Exhibition, Belmont University, Nashville TN, 2012</p>
-
-                            <h3>Research and Scholarly Activities</h3>
-
-                            <h4>Research Interests</h4>
-                            <p>Teaching interests: Health Law, Torts, ERISA, Food &amp; Drug Law</p>
-
-                            <h4>Publications</h4>
-                            <p>State Mandated Disability Insurance as Salve to the Consumer Bankruptcy Imbroglio, 2011 BYU L. Rev 1327 (2011) Regulating Health and Wealth (Forthcoming) Cardozo Law Review (2013)<br>
-                            <span class="font--bold">Representative Publications:</span> State Mandated Disability Insurance as Salve to the Consumer Bankruptcy Imbroglio, 2011 BYU L. Rev 1327 (2011) Regulating Health and Wealth (Forthcoming) Cardozo Law Review (2013)<br>
-                            <span class="font--bold">Journals:</span> State Mandated Disability Insurance as Salve to the Consumer Bankruptcy Imbroglio, 2011 BYU L. Rev 1327 (2011) Regulating Health and Wealth (Forthcoming) Cardozo Law Review (2013)</p>
-
-                            <h4>Regional Lectures</h4>
-                            <p>Heise, D. (2005). Differentiation of Instruction in the ArtRoom. Invited lecture at the Shelby Co Schools Art Teacher Inservice, Southwest Community College, Memphis, TN, 2005.</p>
-
-                            <h4>Invitational and/or Juried Exhibitions</h4>
-                            <p>Heise, D. (2014). Premonition II. National Art Education Association Women's Caucus Art Exhibition.</p>
-
-                            <h3>Public Service</h3>
-
-                            <p>Co-presenter at “Si Se Puede” Latino Youth Leadership Conference, UGA, GA – 2006<br>
-                                Organized art auction for the Tennille Family that raised over $4,000.00 – 2006<br>
-                                Co-curated photographic exhibition with Travis Linville at the Old Capitol</p>
-
-                            <h3>Campus Organizations</h3>
-
-                            <p>GC&amp;SU<br>
-                                Soar Mentor 2005 – present<br>
-                                Search Committee for a Director Of Institutional Equity 2005</p>
-
-                            <h3>Grants</h3>
-
-                            <p>Submitted Fostering Resilience Through Art and Literacy for Families Who are Homeless. A $9,000 grand co-authored with Dr. Laurie MacGilivray to the Peyton Foundation, 2012</p>
-
-                            <h3>Resources</h3>
-
-                            <h4>Advising</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                            <h4>Graduate Students</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                            <h4>Support</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                            <h4>Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                         </div>
 

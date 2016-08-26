@@ -39,6 +39,13 @@ $app->get(
 )->bind('microsite-subpage-faculty');
 
 $app->get(
+    '/microsite/subpage/faculty/single/',
+    function (Request $request) use ($app) {
+        return $app['twig']->render('microsite-subpage-faculty-single.html.twig');
+    }
+)->bind('microsite-subpage-faculty-single');
+
+$app->get(
     '/subpage/',
     function (Request $request) use ($app) {
         return $app['twig']->render('subpage.html.twig');

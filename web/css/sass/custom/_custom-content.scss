@@ -1019,108 +1019,135 @@
     }
 
     &-subpage {
-      &-faculty {
+    }
+  }
 
-        h1,
-        h3 {
-          font-size: 22px;
+  &faculty {
+    h2 {
+      margin: 15px 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    &-single {
+      h1,
+      h3 {
+        font-size: 22px;
+      }
+
+      h2,
+      h4 {
+        font-size: 18px;
+      }
+
+      h1,
+      h4 {
+        @extend .font--lato;
+        font-weight: 700;
+      }
+
+      h1 {
+        display: block;
+        margin: 0 0 10px;
+        padding-bottom: 0;
+        border-bottom: 0;
+        line-height: 1.3em;
+      }
+
+      h2 {
+        margin: 30px 0;
+        margin: 10px 0;
+        color: $color--graydark;
+        text-transform: none;
+        letter-spacing: normal;
+        font-weight: 500;
+        font-style: italic;
+        line-height: normal;
+      }
+
+      h3 {
+        margin: 40px 0 20px 0;
+        color: $color--blue;
+
+        &.first {
+          margin-top: 0;
         }
 
-        h2,
-        h4 {
+        &.uppercase {
+          margin-bottom: 32px;
           font-size: 18px;
-        }
-
-        h1,
-        h4 {
-          @extend .font--lato;
-          font-weight: 700;
-        }
-
-        h3 {
-          margin: 40px 0 20px 0;
-          color: $color--blue;
-        }
-
-        h1 {
-          display: block;
-          margin: 0 0 10px;
-          padding-bottom: 0;
-          border-bottom: 0;
-        }
-
-        h2 {
-          margin: 30px 0;
-          margin: 10px 0;
-          color: $color--graydark;
-          text-transform: none;
-          letter-spacing: normal;
-          font-weight: 500;
-          font-style: italic;
-          line-height: normal;
-        }
-
-        h3 {
-
-        }
-
-        h4 {
-          margin: 5px 0;
-          color: $color--graydark;
-        }
-
-        .table {
-          margin: 20px 0;
-
-          &-- {
-            &caption {
-              margin: 20px 0;
-              color: $color--graydark;
-              text-transform: uppercase;
-              letter-spacing: 0.100em;
-              font-weight: 900;
-              font-size: 15px;
-            }
-
-            &wrapper {
-              margin: 20px 0;
-              padding: 23px 48px;
-              background-color: #F9F9F9;
-            }
-          }
-        }
-
-        table {
-          width: 100%;
-        }
-
-        thead,
-        td:before {
-          color: #999999;
-          text-transform: uppercase;
-          letter-spacing: 0.100em;
-          font-size: 15px;
-        }
-
-        th,
-        td:before {
           font-weight: 900;
+          letter-spacing: 0.100em;
+          text-transform: uppercase;
         }
+      }
 
-        td {
-          &:before {
-            content: attr(data-label);
+      h4 {
+        margin: 5px 0;
+        color: $color--graydark;
+      }
+
+      hr {
+        height: 2px;
+        background-color: #F9F9F9;
+        border: 1px solid #DADADA;
+      }
+
+      .table {
+        margin: 20px 0;
+
+        &-- {
+          &caption {
+            margin: 20px 0;
+            color: $color--graydark;
+            text-transform: uppercase;
+            letter-spacing: 0.100em;
+            font-weight: 900;
+            font-size: 15px;
+          }
+
+          &wrapper {
+            margin: 20px 0;
+            padding: 23px 48px;
+            background-color: #F9F9F9;
           }
         }
+      }
 
-        tbody {
-          color: $color--graydark;
-          font-size: 16px;
-        }
+      table {
+        width: 100%;
+      }
 
-        th, td {
-          padding: 2px;
+      thead,
+      td:before {
+        color: #999999;
+        text-transform: uppercase;
+        letter-spacing: 0.100em;
+        font-size: 15px;
+      }
+
+      th,
+      td:before {
+        font-weight: 900;
+      }
+
+      td {
+        &:before {
+          content: attr(data-label);
         }
+      }
+
+      tbody {
+        color: $color--graydark;
+        font-size: 16px;
+      }
+
+      th, td {
+        padding: 2px;
+      }
+
+      .sidebar--box__border {
+        margin-top: 40px;
       }
     }
   }
@@ -1128,47 +1155,50 @@
   @media (max-width: $screen-xs-max) {
     &microsite {
       &-subpage {
-        &-faculty {
-          table,
-          thead,
-          tbody,
-          th,
-          td,
+      }
+    }
+
+    &faculty {
+      &-single {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead {
           tr {
-            display: block;
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
           }
+        }
 
-          thead {
-            tr {
-              position: absolute;
-              top: -9999px;
-              left: -9999px;
+        tbody {
+          tr {
+            margin-top: 20px;
+
+            &:first-child {
+              margin-top: 0;
             }
           }
+        }
 
-          tbody {
-            tr {
-              margin-top: 20px;
+        td {
+          border: none;
+          position: relative;
+          padding-left: 50%;
 
-              &:first-child {
-                margin-top: 0;
-              }
-            }
-          }
-
-          td {
-            border: none;
-            position: relative;
-            padding-left: 50%;
-
-            &:before {
-              position: absolute;
-              top: 3px;
-              left: 0;
-              width: 45%;
-              padding-right: 10px;
-              white-space: nowrap;
-            }
+          &:before {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
           }
         }
       }
@@ -2279,6 +2309,16 @@ $home--programs-width: 380px;
     }
   }
 
+  &--switch {
+    .content {
+      &-- {
+        &sidebar {
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+
   .img--callout {
     display: block;
     margin-bottom: 36px;
@@ -2579,7 +2619,7 @@ $home--programs-width: 380px;
     }
 
     &headshot {
-      text-align: center;
+      //text-align: center;
     }
 
     &box {
@@ -2588,14 +2628,37 @@ $home--programs-width: 380px;
       width: 100%;
 
       &__ {
+        &title,
+        &subtitle {
+          font-size: 15px;
+        }
+
+        &title {
+          color: $color--blue;
+          font-weight: 700;
+        }
+
+        &link {
+          font-size: 11px;
+          font-weight: 900;
+          letter-spacing: 0.100em;
+          text-transform: uppercase;
+        }
+
         &info {
           float: left;
           width: 100%;
+
+          a {
+            color: #585858;
+          }
 
           &__ {
             &title,
             &desc {
               float: left;
+              margin-bottom: 6px;
+              line-height: 22px;
             }
 
             &title {
@@ -2609,6 +2672,13 @@ $home--programs-width: 380px;
 
             &desc {
 
+            }
+
+            &break {
+              .faculty--box__info__title,
+              .faculty--box__info__desc {
+                width: 100%;
+              }
             }
           }
         }
@@ -2637,6 +2707,59 @@ $home--programs-width: 380px;
       }
 
       a {
+
+      }
+    }
+
+    &grids {
+      overflow: hidden;
+
+      &__ {
+        &wrapper {
+          float: left;
+          position: relative;
+          margin-bottom: -40px;
+        }
+      }
+    }
+
+    &grid {
+      //padding: 50px 0;
+      padding: 20px 0 80px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+        left: 0;
+        border-bottom: 4px solid #EAEAEA;
+      }
+
+      .faculty--box {
+        margin-bottom: 0;
+
+        &__ {
+          &info {
+            margin: 2px 0;
+
+            &__ {
+              &title,
+              &desc {
+                margin-bottom: 0;
+              }
+
+              &title {
+                margin-right: 6px;
+                font-size: 14px;
+              }
+
+              &desc {
+                font-size: 15px;
+              }
+            }
+          }
+        }
 
       }
     }

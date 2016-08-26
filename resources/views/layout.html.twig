@@ -15,7 +15,6 @@
 
     <link rel="stylesheet" href="{{ app.request.basepath }}/css/style.css">
     <script src="{{ app.request.basepath }}/js/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="{{ app.request.basepath }}/js/plugins.header.js"></script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ app.request.basepath }}/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ app.request.basepath }}/favicons/apple-touch-icon-60x60.png">
@@ -38,6 +37,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+{% block scripts %}{% endblock %}
     <script src="{{ app.request.basepath }}/js/plugins.js"></script>
     <script src="{{ app.request.basepath }}/js/main.js"></script>
 
@@ -177,12 +177,13 @@
                         </div>
                     </div>
 
+                    {% if (header_resources is not defined or header_resources != 'no') %}
                     <div class="row">
                         <div id="header--box" class="header--box col-md-24 col-xs-hidden col-md-show">
                             <div class="header--box__wrapper">
                                 <a class="header--box__text header--box__click" href="">Resources for...</a>
                                 <ul id="header--box__list" class="no-style header--box__text visuallyhidden">
-                                    <li><a href="#prospective-students" data-box="prospective-students">Prospective Students</a></li>
+                                    <li><a href="/prospective/" data-box="prospective-students">Prospective Students</a></li>
                                     <li><a href="#current-students" data-box="current-students">Current and Returning Students</a></li>
                                     <li><a href="#parents" data-box="parents">Parents</a></li>
                                     <li><a href="#alumni" data-box="alumni">Alumni</a></li>
@@ -527,6 +528,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endif %}
 
                 </div>
             </div>
@@ -749,8 +751,6 @@ Title IX of the Education Amendments of 1972 protects people from discrimination
 
         <a href="">Email Preferences <span class="fa fa-angle-right"></span></a>
     </div>
-
-{% block scripts %}{% endblock %}
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!-- <script>
