@@ -1507,6 +1507,89 @@ ul.select-style2-selectBox-dropdown-menu {
     }
   }
 
+  &__new-perspective {
+    .h1 {
+        margin-bottom: 12px;
+    }
+
+    p {
+      color: $color--white;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .box {
+        background-color: $color--blue;
+        background-color: rgba(#1D2125, 0.33);
+        padding: 15px;
+    }
+
+    .text-link {
+        margin-bottom: 42px;
+    }
+
+    .text-link a {
+       color: $color--white;
+       font-weight: bold;
+       letter-spacing: 0.100em;
+       text-transform: uppercase;
+
+      &:focus,
+      &:hover {
+        color: $color--blue;
+        font-weight: 700;
+      }
+    }
+
+    .box .box-title {
+       color: $color--white;
+       font-weight: bold;
+       letter-spacing: 0.100em;
+       margin-bottom: 12px;
+       text-transform: uppercase;
+    }
+
+    .slideshow .slideshow--container {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__top {
+      position: relative;
+
+      ul {
+        padding: 15px 30px 42px 30px;
+        background-color: $color--blue;
+        background-color: rgba(#1D2125, 0.33);
+
+        a,
+        li {
+          color: $color--white;
+        }
+
+        a {
+          &:focus,
+          &:hover {
+            @extend %a-hover;
+          }
+        }
+
+        li {
+          float: left;
+
+          & + li:before {
+            padding: 0 20px;
+            content: "|";
+          }
+        }
+      }
+    }
+  }
+
   &__prospective-students {
     &__apply-online {
       margin-bottom: 60px;
@@ -1528,6 +1611,29 @@ ul.select-style2-selectBox-dropdown-menu {
         color: $color--graydark;
       }
     }
+  }
+
+  &__experience-memphis {
+      padding-bottom: 32px;
+
+      img {
+          max-width: 100%;
+      }
+
+      .box {
+          margin-top: 24px;
+      }
+
+      .box .box--title .box--link, .box p {
+        color: $color--graydark;
+      }
+
+      .box .box--title .box--link {
+          &:focus,
+          &:hover {
+            color: $color--blue-2;
+          }
+      }
   }
 
   &__hotline {
@@ -1562,10 +1668,6 @@ ul.select-style2-selectBox-dropdown-menu {
       text-transform: uppercase;
       font-weight: 900;
     }
-  }
-
-  &__colleges {
-
   }
 }
 
@@ -2580,4 +2682,16 @@ $home--programs-width: 380px;
       }
     }
   }
+}
+
+.wrap--investment {
+    .sidebar--news__wrap {
+        top: -80px;
+    }
+}
+
+@media(min-width: $screen-md-min) {
+.prospective__colleges {
+    padding-bottom: 80px;
+}
 }

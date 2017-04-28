@@ -1214,7 +1214,7 @@ body { position: relative; margin: 0 auto; color: #000000; font-size: 16px; font
 
 .text--deadline { font-style: italic; font-size: 14px; line-height: 30px; }
 
-a:focus, a:hover, .wrap--home__alumni .box--link:focus, .wrap--home__alumni .box--link__gray:focus, .wrap--home__alumni .box--link:hover, .wrap--home__alumni .box--link__gray:hover, .wrap--home__current-students__top ul a:focus, .wrap--home__current-students__top ul a:hover { color: #00C0F2; }
+a:focus, a:hover, .wrap--home__alumni .box--link:focus, .wrap--home__alumni .box--link__gray:focus, .wrap--home__alumni .box--link:hover, .wrap--home__alumni .box--link__gray:hover, .wrap--home__current-students__top ul a:focus, .wrap--home__current-students__top ul a:hover, .wrap--home__new-perspective__top ul a:focus, .wrap--home__new-perspective__top ul a:hover { color: #00C0F2; }
 
 a { color: #004891; -webkit-transition: color 0.3s ease; -o-transition: color 0.3s ease; transition: color 0.3s ease; }
 a:focus, a:hover { text-decoration: none; }
@@ -1429,6 +1429,10 @@ header nav > ul > li:focus > a, header nav > ul > li:hover > a, header nav > ul 
 
 .cover { position: relative; }
 .cover--title { position: relative; color: #FFFFFF; text-align: center; text-shadow: 3px 4px 10px rgba(7, 8, 8, 0.75); letter-spacing: 0.05em; font-size: 30px; }
+
+.prospective--cover__box { position: absolute; top: 400px; padding-bottom: 60px; max-height: 270px; width: 400%; height: 270px; background-color: #1C1F23; background-color: rgba(28, 31, 35, 0.85); color: #FFFFFF; }
+.prospective--cover__box:before { position: absolute; left: -70px; width: 0; height: 0; border-left: 70px solid transparent; border-bottom: 270px solid #1C1F23; border-bottom-color: rgba(28, 31, 35, 0.85); content: ''; -moz-transform: scale(0.9999); }
+.prospective--cover__box p { margin-bottom: 16px; color: #FFFFFF; }
 
 .home--cover__box { position: absolute; top: 500px; margin-left: -400%; padding-bottom: 60px; max-height: 270px; width: 500%; height: 270px; background-color: #1C1F23; background-color: rgba(28, 31, 35, 0.85); color: #FFFFFF; }
 .home--cover__box:before { position: absolute; right: -70px; width: 0; height: 0; border-right: 70px solid transparent; border-bottom: 270px solid #1C1F23; border-bottom-color: rgba(28, 31, 35, 0.85); content: ''; -moz-transform: scale(0.9999); }
@@ -1705,9 +1709,28 @@ ul.select-style2-selectBox-dropdown-menu a { background: none; color: #231F20; p
 .wrap--home__current-students__top ul li + li:before { padding: 0 20px; content: "|"; }
 .wrap--home__current-students__images { text-align: center; }
 .wrap--home__current-students__images img { max-width: 100%; margin-bottom: 60px; }
+.wrap--home__new-perspective .h1 { margin-bottom: 12px; }
+.wrap--home__new-perspective p { color: #FFFFFF; }
+.wrap--home__new-perspective img { max-width: 100%; }
+.wrap--home__new-perspective .box { background-color: #004891; background-color: rgba(29, 33, 37, 0.33); padding: 15px; }
+.wrap--home__new-perspective .text-link { margin-bottom: 42px; }
+.wrap--home__new-perspective .text-link a { color: #FFFFFF; font-weight: bold; letter-spacing: 0.100em; text-transform: uppercase; }
+.wrap--home__new-perspective .text-link a:focus, .wrap--home__new-perspective .text-link a:hover { color: #004891; font-weight: 700; }
+.wrap--home__new-perspective .box .box-title { color: #FFFFFF; font-weight: bold; letter-spacing: 0.100em; margin-bottom: 12px; text-transform: uppercase; }
+.wrap--home__new-perspective .slideshow .slideshow--container { position: relative; top: 0; left: 0; right: 0; }
+.wrap--home__new-perspective__top { position: relative; }
+.wrap--home__new-perspective__top ul { padding: 15px 30px 42px 30px; background-color: #004891; background-color: rgba(29, 33, 37, 0.33); }
+.wrap--home__new-perspective__top ul a, .wrap--home__new-perspective__top ul li { color: #FFFFFF; }
+.wrap--home__new-perspective__top ul li { float: left; }
+.wrap--home__new-perspective__top ul li + li:before { padding: 0 20px; content: "|"; }
 .wrap--home__prospective-students__apply-online { margin-bottom: 60px; padding: 40px 40px 0; border: 1px solid #E0E0E0; }
 .wrap--home__prospective-students__apply-online .h3 { margin-top: 0; margin-bottom: 40px; color: #004891; font-size: 24px; }
 .wrap--home__prospective-students__apply-online .box p { color: #4C4C4C; }
+.wrap--home__experience-memphis { padding-bottom: 32px; }
+.wrap--home__experience-memphis img { max-width: 100%; }
+.wrap--home__experience-memphis .box { margin-top: 24px; }
+.wrap--home__experience-memphis .box .box--title .box--link, .wrap--home__experience-memphis .box .box--title .box--link__gray, .wrap--home__experience-memphis .box p { color: #4C4C4C; }
+.wrap--home__experience-memphis .box .box--title .box--link:focus, .wrap--home__experience-memphis .box .box--title .box--link__gray:focus, .wrap--home__experience-memphis .box .box--title .box--link:hover, .wrap--home__experience-memphis .box .box--title .box--link__gray:hover { color: #00C0F2; }
 .wrap--home__hotline { padding: 20px 0; border-width: 1px 0; border-style: solid; border-color: #DADADA; background-color: #F4F4F4; color: #505050; font-size: 15px; }
 .wrap--home__hotline ul li { float: left; padding: 0 10px; }
 .wrap--home__hotline ul li:first-child { padding-left: 0; }
@@ -1893,6 +1916,9 @@ ul.select-style2-selectBox-dropdown-menu a { background: none; color: #231F20; p
 .menu--bottom ul a:focus, .menu--bottom ul a:hover { color: #004891; }
 .menu--expand a i { position: relative; top: 4px; left: 6px; font-size: 24px; }
 
+.wrap--investment .sidebar--news__wrap { top: -80px; }
+
+@media (min-width: 992px) { .prospective__colleges { padding-bottom: 80px; } }
 footer { border-top: 1px solid #C4C5C2; }
 
 .footer--top { padding: 40px 0; background-color: #0C345D; color: #FFFFFF; }
@@ -1946,6 +1972,7 @@ footer { border-top: 1px solid #C4C5C2; }
   .type--home .cover { background-image: none !important; min-height: 0 !important; }
   .type--alumni .cover { min-height: 525px !important; }
   .slideshow { padding-top: 97.647058823529%; margin-top: 83px; }
+  .wrap--home__new-perspective .slideshow { padding-top: 0; }
   .slideshow--container { top: 83px; left: 0; right: 0; bottom: 0; } }
 @media (min-width: 768px) { .col-sm-hidden { display: none !important; }
   .col-sm-show { display: block !important; }

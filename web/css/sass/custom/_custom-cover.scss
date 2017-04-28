@@ -29,6 +29,35 @@
   }
 }
 
+.prospective--cover__box {
+  position: absolute;
+  top: 400px;
+  padding-bottom: 60px;
+  max-height: 270px;
+  width: 400%;
+  height: 270px;
+  background-color: #1C1F23;
+  background-color: rgba(#1C1F23, .85);
+  color: $color--white;
+
+  &:before {
+    position: absolute;
+    left: -70px;
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-bottom: 270px solid #1C1F23;
+    border-bottom-color: rgba(#1C1F23, .85);
+    content: '';
+    -moz-transform: scale(.9999);
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: $color--white;
+  }
+}
+
 .home--cover__box {
   position: absolute;
   top: 500px;
