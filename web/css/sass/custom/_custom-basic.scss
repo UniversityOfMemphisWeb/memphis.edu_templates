@@ -698,7 +698,7 @@ nav {
         color: $color--white;
       }
 
-      i {
+      span {
         position: absolute;
         top: 15px;
         left: 18px;
@@ -721,7 +721,7 @@ nav {
       text-transform: uppercase;
       @include transition(all 0.3s ease);
 
-      i {
+      span {
         vertical-align: middle;
         padding-right: 20px;
         font-size: 40px;

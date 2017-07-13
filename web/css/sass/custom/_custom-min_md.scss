@@ -359,7 +359,7 @@
                 float: none;
               }
 
-              i {
+              span.fa {
                 display: none;
               }
             }
@@ -522,7 +522,7 @@
       &large {
         //padding: 8px 6px 10px 6px;
 
-        i {
+        span {
           //padding-right: 8px;
           display: block;
           padding-right: 0;
@@ -542,7 +542,7 @@
   .enews--button {
     padding: 8px 6px 10px 6px;
 
-    i {
+    span {
       padding-right: 8px;
     }
 

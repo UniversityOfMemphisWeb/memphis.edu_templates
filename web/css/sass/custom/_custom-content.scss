@@ -142,7 +142,7 @@
   line-height: 32px;
   @include transition(all 0.3s ease);
 
-  i {
+  span {
     float: left;
     padding-right: 18px;
     font-size: 32px;
@@ -520,7 +520,7 @@
               color: $color--white;
             }
 
-            i {
+            span {
               float: left;
               margin-bottom: 50px;
               margin-right: 20px;
@@ -547,7 +547,7 @@
       }
 
       &events {
-        i {
+        span {
           &.fa-clock-o {
             color: #B7B7B7;
           }
@@ -618,7 +618,7 @@
             color: $color--blue-2;
           }
 
-          i {
+          span {
             position: absolute;
             top: 3px;
             left: 0;
@@ -690,7 +690,7 @@
           color: $color--blue;
         }
 
-        i {
+        span {
           font-size: 55px;
         }
         
@@ -914,7 +914,7 @@
                     font-size: 16px;
                     line-height: 20px;
 
-                    i {
+                    span {
                       margin-bottom: 20px;
                       margin-right: 10px;
                       font-size: 24px;
@@ -955,7 +955,7 @@
                 font-size: 16px;
                 line-height: 20px;
 
-                i {
+                span {
                   margin-bottom: 20px;
                   margin-right: 10px;
                   font-size: 24px;
@@ -1359,7 +1359,7 @@ ul.select-style2-selectBox-dropdown-menu {
     }
 
     $box--transparent-width: 290px;
-    i {
+    span {
       float: left;
       padding: 0 percentage(35px / $box--transparent-width) 0 percentage(15px / $box--transparent-width);
       font-size: 32px;
@@ -1655,7 +1655,7 @@ ul.select-style2-selectBox-dropdown-menu {
           padding-left: 0;
         }
 
-        > i {
+        > span {
           float: right;
           color: #ACACAC;
           font-size: 28px;
@@ -1746,7 +1746,7 @@ ul.select-style2-selectBox-dropdown-menu {
     line-height: 64px;
     @include transition(all 0.3s ease-in-out);
 
-    i {
+    span {
       margin-left: 16px;
       font-size: 22px;
     }
@@ -1968,7 +1968,7 @@ $sidebar_width: 340px;
         text-align: center;
       }
 
-      i {
+      span.fa {
         display: block;
         font-size: 33px;
         margin-bottom: 16px;
@@ -1996,7 +1996,8 @@ $sidebar_width: 340px;
       letter-spacing: 0.100em;
       font-weight: 700;
 
-      i {
+      span.fa {
+        display: inline-block;
         margin-left: 4px;
         font-size: 22px;
       }
@@ -2088,7 +2089,7 @@ $sidebar_width: 340px;
           color: $color--blue;
           font-weight: 700;
 
-          > i {
+          > span {
             position: absolute;
             margin: 4px 0 0 6px;
             color: #A2A2A2;
@@ -2195,7 +2196,7 @@ $home--programs-width: 380px;
     .sidebar--box__title {
       cursor: pointer;
 
-      i {
+      span {
         float: right;
 
         &:before {
@@ -2247,7 +2248,7 @@ $home--programs-width: 380px;
             background-color: $color--blue-2;
           }
 
-          i {
+          span {
             position: absolute;
             left: 15px;
             font-size: 24px;
@@ -2673,7 +2674,7 @@ $home--programs-width: 380px;
 
     &expand {
       a {
-        i {
+        span {
           position: relative;
           top: 4px;
           left: 6px;

@@ -95,7 +95,7 @@ header {
               display: inline-block;
               color: $color--white;
 
-              i {
+              span {
                 font-weight: 900;
               }
             }
@@ -157,7 +157,7 @@ header {
   &--menu__button {
     text-align: right;
 
-    i {
+    span {
       position: relative;
       z-index: 999;
       color: $color--blue;
@@ -251,7 +251,7 @@ header {
               float: left;
             }
 
-            i {
+            span.fa {
               float: right;
               padding: 13px 15px;
               border-left: 1px solid $color--white;

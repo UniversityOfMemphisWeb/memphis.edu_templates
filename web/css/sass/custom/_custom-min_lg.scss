@@ -116,7 +116,7 @@
       font-size: 18px;
 
       a {
-        i {
+        span {
           font-size: 36px;
         }
       }
@@ -137,7 +137,7 @@
   .button {
     &-- {
       &large {
-        i {
+        span {
           display: inline;
           padding-right: 20px;
         }
@@ -149,7 +149,7 @@
     padding: 8px 22px 10px 12px;
     width: auto;
 
-    i {
+    span {
       padding-right: 18px;
     }
   }
