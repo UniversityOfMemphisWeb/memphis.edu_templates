@@ -66,6 +66,14 @@ $app->get(
     }
 )->bind('alumni-subpage');
 
+$app->get(
+    '/prospective-students/',
+    function (Request $request) use ($app) {
+        return $app['twig']->render('prospective-students.html.twig');
+    }
+)->bind('prospective-students');
+
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
