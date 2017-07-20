@@ -2695,3 +2695,23 @@ $home--programs-width: 380px;
     padding-bottom: 80px;
 }
 }
+
+
+
+.ranking {
+  &-- {
+    &wrap {
+      background-color: #F9F9F9;
+      color: #004891;
+      text-align: center;
+    }
+
+    &separator {
+      border-bottom: 1px solid #E0E0E0;
+    }
+
+    &program {
+      font-size: 15px;
+    }
+  }
+}

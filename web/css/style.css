@@ -1919,6 +1919,10 @@ ul.select-style2-selectBox-dropdown-menu a { background: none; color: #231F20; p
 .wrap--investment .sidebar--news__wrap { top: -80px; }
 
 @media (min-width: 992px) { .prospective__colleges { padding-bottom: 80px; } }
+.ranking--wrap { background-color: #F9F9F9; color: #004891; text-align: center; }
+.ranking--separator { border-bottom: 1px solid #E0E0E0; }
+.ranking--program { font-size: 15px; }
+
 footer { border-top: 1px solid #C4C5C2; }
 
 .footer--top { padding: 40px 0; background-color: #0C345D; color: #FFFFFF; }
@@ -6651,3 +6655,5 @@ footer { border-top: 1px solid #C4C5C2; }
   .type--microsite-subpage-faculty .table--wrapper { padding-left: 0; padding-right: 0; }
   .box--transparent__title { padding: 5px 0; }
   .table { line-height: 1; } }
+
+/*# sourceMappingURL=style.css.map */
