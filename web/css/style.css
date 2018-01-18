@@ -6666,3 +6666,7 @@ footer { border-top: 1px solid #C4C5C2; }
   .type--microsite-subpage-faculty .table--wrapper { padding-left: 0; padding-right: 0; }
   .box--transparent__title { padding: 5px 0; }
   .table { line-height: 1; } }
+
+#disclaimer { color: #fff; }
+#disclaimer a { border-bottom: 1px dotted; }
+.header-ranked-shield { display: inline-block; margin-left: 12px; max-width: 64px; }
