@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+    $('.prospective-students-content').hide();
+    $('#prospective-visit').show();
+
+    $('.ps-content-toggle').click(function(e) {
+        e.preventDefault();
+
+        var selected = $(this).attr('href').replace(/^.*?(#|$)/,'');
+        $('.prospective-students-content').hide();
+        $('#prospective-' + selected).show();
+        console.log('Showing ' + selected);
+    });
+
     var $html = $('html'),
         $header_menu_button = $('#header--menu__button'),
         $header_menu_button_bars = $('#header--menu__button__bars', $header_menu_button),
@@ -32,10 +44,36 @@ $(document).ready(function() {
             padding: 0
         };
 
-    if ($().matchHeight) {
-        var $matchHeight = $('.match-height');
-        $matchHeight.matchHeight();
-    }
+    (function($,sr){
+        var debounce = function (func, threshold, execAsap) {
+            var timeout;
+
+            return function debounced () {
+                var obj = this, args = arguments;
+                function delayed () {
+                    if (!execAsap) {
+                        func.apply(obj, args);
+                    }
+
+                    timeout = null;
+                }
+
+                if (timeout) {
+                    clearTimeout(timeout);
+                } else if (execAsap) {
+                    func.apply(obj, args);
+                }
+
+                timeout = setTimeout(delayed, threshold || 100);
+            };
+        };
+
+        $.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+    })($,'smartresize');
+
+    //$(window).smartresize(function(){
+    //});
 
     var menu_list = function(that, type) {
         var $that = $(that),
@@ -445,11 +483,11 @@ $(document).ready(function() {
             $that_icon = $('i', $that),
             $that_list = $that.siblings('.nav--list');
 
-        if ($that_icon.hasClass('fa-angle-up')) {
-            $that_icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+        if ($that_icon.hasClass('fa-angle-right')) {
+            $that_icon.removeClass('fa-angle-right').addClass('fa-angle-down');
             $that_list.addClass('col-xs-show');
         } else {
-            $that_icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+            $that_icon.removeClass('fa-angle-down').addClass('fa-angle-right');
             $that_list.removeClass('col-xs-show');
         }
 
@@ -487,9 +525,6 @@ $(document).ready(function() {
 $(window).load(function() {
     $('.lazy').show().lazyload({
         skip_invisible : false,
-        threshold : 200,
-        load: function() {
-            $.fn.matchHeight._update()
-        }
+        threshold : 200
     });
 });

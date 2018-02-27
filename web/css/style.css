@@ -1214,9 +1214,14 @@ body { position: relative; margin: 0 auto; color: #000000; font-size: 16px; font
 
 .text--deadline { font-style: italic; font-size: 14px; line-height: 30px; }
 
-a:focus, a:hover, .wrap--home__current-students__top ul a:focus, .wrap--home__new-perspective__top ul a:focus, .wrap--home__new-perspective__top ul a:hover { color: #004891; }
+a:focus, a:hover, .wrap--home__current-students__top ul a:focus, .wrap--home__new-perspective__top ul a:focus { color: #004891; }
 
  .wrap--home__current-students__top ul a:hover { color: #cdcdcd; }
+
+.prospective-students-content .box p a { color: #fff; }
+
+a.ps-content-toggle:active, a.ps-content-toggle:focus, .wrap--home__new-perspective__top ul a:hover, .prospective-students-content .box p a:hover { border-bottom: 2px dotted #fff; color: #fff; padding-bottom: 2px; }
+
 
 /* .wrap--home__alumni .box--link:focus, .wrap--home__alumni .box--link__gray:focus, .wrap--home__alumni .box--link:hover, .wrap--home__alumni .box--link__gray:hover { color: #efefef; font-style: italic; letter-spacing: 0.03em; } 
 .wrap--home__alumni .box--link:focus, .wrap--home__alumni .box--link__gray:focus, .wrap--home__alumni .box--link:hover, .wrap--home__alumni .box--link__gray:hover { color: #017eaa; } */
