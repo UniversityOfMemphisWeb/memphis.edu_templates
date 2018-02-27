@@ -134,57 +134,21 @@
                         <div class="row">
                             <div class="wrap--home__new-perspective__top col-md-show col-xs-hidden col-md-16">
                                 <ul class="no-style">
-                                    <li><a href="#">Plan a Visit</a></li>
-                                    <li><a href="#">Student Services</a></li>
-                                    <li><a href="#">Campus Dining</a></li>
-                                    <li><a href="#">Campus Living</a></li>
+                                    <li><a class="ps-content-toggle" href="#visit">Plan a Visit</a></li>
+                                    <li><a class="ps-content-toggle" href="#services">Student Services</a></li>
+                                    <li><a class="ps-content-toggle" href="#dining">Campus Dining</a></li>
+                                    <li><a class="ps-content-toggle" href="#living">Campus Living</a></li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col col-sm-22 col-sm-offset-1 col-md-14 col-md-offset-1">
+{% include 'prospective-visit.html.twig' %}
 
-                                <div class="row">
-                                    <div class="col-xs-24">
-                                        <div class="h1 h1--white">
-                                            <span class="h1--sub">Plan a Visit</span>
-                                            <span class="h1--title">Your New Perspective</span>
-                                            <span class="icon--circle fa fa-angle-up col-sm-hidden"></span>
-                                        </div>
-                                    </div>
-                                </div>
+{% include 'prospective-services.html.twig' %}
 
-                                <div class="row">
-                                    <div class="col-xs-19">
-                                        <p>The University of Memphis is the place to be.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+{% include 'prospective-dining.html.twig' %}
 
-                                        <div class="text-link">
-                                            <a href="#">Plan a Visit <span class="fa fa-angle-right"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-xs-24 col-sm-12">
-                                        <a href="#">
-                                            <img class="lazy" data-original="{{ app.request.basepath }}/img/transparent-campus-map.png" alt="Campus Map"/>
-                                            <noscript><img src="{{ app.request.basepath }}/img/transparent-campus-map.png" alt="Campus Map"/></noscript>
-                                        </a>
-                                    </div>
-
-                                    <div class="box col-xs-24 col-sm-10 col-sm-offset-2 col-md-8 col-md-offset-2">
-                                        <div class="box-title">By the Numbers</div>
-                                        <p>Campus Population 0,000 Male students make up 0% of the total population. 0,000 Female students make up the other 0%.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col col-sm-hidden col-md-show col-md-8 col-md-offset-1">
-                                {% include 'slideshow.html.twig' with {'title' : 'What\'s Local?'} %}
-                            </div>
-
-                        </div>
+{% include 'prospective-living.html.twig' %}
 
                     </div>
 
@@ -830,3 +794,4 @@
         </div>
 
 {% endblock %}
+
