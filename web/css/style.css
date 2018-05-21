@@ -1804,7 +1804,7 @@ ul.select-style2-selectBox-dropdown-menu a { background: none; color: #231F20; p
 .masonry--wrap { margin-bottom: 40px; }
 .masonry .item { position: relative; float: left; width: 47.0338983051%; margin: 0 2.9661016949% 2.5% 0; }
 .masonry .item, .masonry .item a { color: #FFFFFF; }
-.masonry .item a { display: block; }
+/* .masonry .item a { display: block; } */
 .masonry .item img { max-width: 100%; width: 100%; }
 .masonry .item--layer, .masonry .item--layer__second, .masonry .item--layer__content { -webkit-transition: background-color 0.3s ease-in-out; -o-transition: background-color 0.3s ease-in-out; transition: background-color 0.3s ease-in-out; }
 .masonry .item--layer, .masonry .item--layer__second { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 15px; line-height: 1.6em; }
@@ -1826,12 +1826,12 @@ ul.select-style2-selectBox-dropdown-menu a { background: none; color: #231F20; p
 .masonry .item--layer__wrap span > span { padding: 4px 0 0 0; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0.25px; }
 .masonry .item--layer__readmore { display: inline-block; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.100em; font-weight: 700; }
 .masonry .item--layer__readmore span.fa, .masonry .item--layer__readmore span.video--layout__button-play { display: inline-block; margin-left: 4px; font-size: 22px; }
-.masonry .item--layer__readmore:focus, .masonry .item--layer__readmore:hover { color: #004891; }
+.masonry .item--layer__readmore:focus, .masonry .item--layer__readmore:hover { border-bottom: 2px dotted #fff; }
 .masonry .item--layer__second { z-index: 700; height: 205%; background-color: #004891; background-color: rgba(0, 72, 145, 0.9); }
 .masonry .item--layer__second.visuallyhidden { background-color: transparent; }
 .masonry .item--layer__second__wrap { height: 90%; }
 .masonry .item--layer__second__wrap__center div { padding: 0 4.4247787611%; width: 100%; }
-.masonry .item--layer__second__wrap p { margin: 1em 0; color: inherit; font-size: inherit; }
+.masonry .item--layer__second__wrap p { margin: 1em 0; color: inherit; }
 .masonry .item--layer__second__wrap span { display: block; text-transform: uppercase; letter-spacing: 0.150em; font-weight: 700; }
 .masonry .item-bottom:nth-last-child(-n+2) .item--layer__second { top: auto; bottom: 0; }
 .masonry .item--lists { width: 100%; margin: 0; padding: 8px 3.4285714286% 40px; background-color: #FEFDFD; border: 1px solid #E0E0E0; }
