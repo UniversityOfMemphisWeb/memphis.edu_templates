@@ -1476,7 +1476,7 @@ header nav > ul > li:focus > a, header nav > ul > li:hover > a, header nav > ul 
 .slideshow--overlay { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 150; background: -moz-linear-gradient(top, transparent 25%, black 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, transparent), color-stop(100%, black)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, transparent 25%, black 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top, transparent 25%, black 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top, transparent 25%, black 100%); /* IE10+ */ background: linear-gradient(to bottom, transparent 25%, black 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */ }
 .slideshow--overlay__wrapper { position: absolute; bottom: 65px; }
 .slideshow--overlay a { display: block; margin: 0 20px; color: #FFFFFF; }
-.slideshow--overlay__title { margin-bottom: 10px; text-transform: uppercase; font-weight: 900; font-size: 18px; }
+.slideshow--overlay__title { margin-bottom: 10px; font-weight: 900; font-size: 18px; }
 .slideshow--overlay__desc { font-size: 15px; line-height: 18px; }
 .slideshow-page--slider { margin-bottom: 60px; }
 .slideshow-page--slider img { width: 100%; }
